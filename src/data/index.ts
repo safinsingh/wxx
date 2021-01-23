@@ -1,3 +1,5 @@
+import { atom } from 'jotai'
+
 export const links = Object.entries({
 	github: 'https://github.com/safinsingh',
 	twitter: 'https://twitter.com/safinsingh',
@@ -25,3 +27,5 @@ export const query = `
 		}
 	}
 `
+
+export const colorModeAtom = atom('light')
