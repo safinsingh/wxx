@@ -1,6 +1,6 @@
 :root {
-	--section-spacing: 1rem;
-	--footer-blur-radius: 5px;
+	--section-spacing: 1.25rem;
+	--footer-blur-radius: 3px;
 }
 
 html,
@@ -31,12 +31,7 @@ div._footer_div {
 	background: var(--bg);
 }
 
-@supports (
-	(
-		(-webkit-backdrop-filter: blur(var(--footer-blur-radius))) or
-			(backdrop-filter: blur(var(--footer-blur-radius)))
-	)
-) {
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 	div._footer_div {
 		background-color: var(--bg-alpha);
 		backdrop-filter: blur(var(--footer-blur-radius));

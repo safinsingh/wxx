@@ -52,7 +52,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 				</Section>
 			</Container>
 			<Container large={true}>
-				<Section name="Projects ⚒️">
+				<Section name="Projects 🔨">
 					<Grid>
 						{projects.map((projectProps) => (
 							<Card {...projectProps} key={projectProps.name} />
@@ -67,7 +67,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					:root {
 						--fg: #000;
 						--bg: #fff;
-						--bg: #ffffffb0;
+						--bg-alpha: #ffffff80;
 						--accent: #32b073;
 						--muted: #666666;
 						--light-gray: #d9d9d9;
@@ -79,7 +79,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					:root {
 						--fg: #fff;
 						--bg: #000;
-						--bg-alpha: #000000b0;
+						--bg-alpha: #00000080;
 						--accent: #1fff92;
 						--muted: #999999;
 						--light-gray: #262626;
