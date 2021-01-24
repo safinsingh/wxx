@@ -1,14 +1,12 @@
 const { resolve } = require('path')
 
-const { merge } = require('webpack-merge')
-
 module.exports = {
-	webpack: (config) =>
-		merge(config, {
-			resolve: {
-				alias: {
-					'~': resolve('./src')
-				}
-			}
-		})
+	webpack(config) {
+		config.resolve.alias = {
+			...config.resolve.alias,
+			'~': resolve('./src')
+		}
+
+		return config
+	}
 }

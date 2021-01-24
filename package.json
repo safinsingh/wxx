@@ -13,11 +13,11 @@
 	},
 	"dependencies": {
 		"isomorphic-unfetch": "^3.1.0",
-		"jotai": "^0.12.6",
+		"jotai": "^0.12.7",
 		"next": "10.0.5",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
-		"webpack-merge": "^5.7.3"
+		"scheduler": "^0.20.1"
 	},
 	"devDependencies": {
 		"@kiwi/eslint-config": "^1.7.0",
