@@ -26,11 +26,11 @@ const Meta = () => (
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Safin Singh" />
 		<meta property="og:site_name" content="Safin Singh" />
-		<meta property="og:image" content="/logo.png" />
-		<meta property="og:image:alt" content="/logo.png" />
+		<meta property="og:image" content="/favicon.png" />
+		<meta property="og:image:alt" content="/favicon.png" />
 		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="1200" />
+		<meta property="og:image:width" content="512" />
+		<meta property="og:image:height" content="512" />
 		<meta property="og:locale" content="en_US" />
 
 		{/* Twitter */}
@@ -44,11 +44,11 @@ const Meta = () => (
 			name="twitter:description"
 			content="Web developer and cybersecurity competitor."
 		/>
-		<meta name="twitter:image" content="/logo.png" />
+		<meta name="twitter:image" content="/favicon.png" />
 
 		{/* WeChat */}
 		<meta itemProp="name" content="Safin Singh" />
-		<meta itemProp="image" content="/logo.png" />
+		<meta itemProp="image" content="/favicon.png" />
 		<meta
 			name="description"
 			itemProp="description"
@@ -56,8 +56,8 @@ const Meta = () => (
 		/>
 
 		{/* Apple */}
-		<link rel="apple-touch-icon" href="/logo.png" />
-		<link rel="apple-touch-startup-image" href="/logo.png" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
+		<link rel="apple-touch-startup-image" href="/favicon.png" />
 		<meta name="apple-mobile-web-app-title" content="Safin Singh" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -74,12 +74,12 @@ const Meta = () => (
 		<meta name="wap-font-scale" content="no" />
 
 		{/* Icons */}
-		<meta name="image" content="/logo.png" />
-		<link rel="icon" href="/logo.png" />
+		<meta name="image" content="/favicon.png" />
+		<link rel="icon" href="/favicon.png" />
 
 		{/* Misc */}
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="theme-color" content="#040404" />
+		<meta name="theme-color" content="#000000" />
 		<link rel="canonical" href="https://safin.dev" />
 
 		{/* External Dependencies */}
