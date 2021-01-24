@@ -28,4 +28,6 @@ export const query = `
 	}
 `
 
-export const colorModeAtom = atom('light')
+export const colorModeAtom = atom<'light' | 'dark'>('light')
+export const reverseColorMode = (mode: 'light' | 'dark') =>
+	mode === 'light' ? 'dark' : 'light'
