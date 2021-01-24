@@ -33,13 +33,13 @@ const Home = ({ projects }: { projects: INode[] }) => {
 				<Section name="About ✨">
 					<p>
 						Hey! I’m Safin Singh, a self-taught high-school student, full-stack
-						developer, and cybersecurity enthusiast.
+						developer, and cybersecurity competitor.
 					</p>
 					<p>
 						I’ve developed production-ready applications in accordance with
-						industry standards with popular frameworks like React. In my free
-						time, I enjoy creating side projects with TypeScript &amp; Rust and
-						playing the cello.
+						industry standards using popular web frameworks such as React. In my
+						free time, I enjoy making side projects with TypeScript &amp; Rust
+						and playing the cello.
 					</p>
 					<p>
 						I’m currently not looking for internships at the moment, but I will
@@ -61,14 +61,13 @@ const Home = ({ projects }: { projects: INode[] }) => {
 				</Section>
 			</Container>
 			<Footer />
-
 			{colorMode === 'light' ? (
 				<style global jsx>
 					{`
 					:root {
 						--fg: #000;
 						--bg: #fff;
-						--bg: #ffffff80;
+						--bg: #ffffffb0;
 						--accent: #32b073;
 						--muted: #666666;
 						--light-gray: #d9d9d9;
@@ -80,7 +79,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					:root {
 						--fg: #fff;
 						--bg: #000;
-						--bg-alpha: #00000080;
+						--bg-alpha: #000000b0;
 						--accent: #1fff92;
 						--muted: #999999;
 						--light-gray: #262626;
