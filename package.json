@@ -12,7 +12,6 @@
 		"lint:ci": "eslint '*/**/*.{js,ts,tsx}' --quiet"
 	},
 	"dependencies": {
-		"graphql": "^15.4.0",
 		"isomorphic-unfetch": "^3.1.0",
 		"jotai": "^0.12.6",
 		"next": "10.0.5",
