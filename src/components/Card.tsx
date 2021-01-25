@@ -6,15 +6,13 @@ const Card = ({
 	name: string
 	description: string
 	url: string
-}) => {
-	return (
-		<a href={url} target="_blank">
-			<div className="_card">
-				<h2>{name}</h2>
-				<p>{description}</p>
-			</div>
-		</a>
-	)
-}
+}) => (
+	<a href={url} target="_blank">
+		<div className="_card">
+			<h2>{name}</h2>
+			<p>{description}</p>
+		</div>
+	</a>
+)
 
 export default Card

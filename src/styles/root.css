@@ -87,6 +87,10 @@ p {
 	margin: 1rem 0rem;
 }
 
+._link_wrapper {
+	color: var(--fg);
+}
+
 ._section_about p {
 	margin: 1rem 0rem;
 	font-weight: 300;
