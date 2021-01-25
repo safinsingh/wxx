@@ -28,7 +28,7 @@ export const getProjects = async () => {
 
 const Handler = async (_: NextApiRequest, res: NextApiResponse) => {
 	const { props: data } = await getProjects()
-	res.status(200).json(data)
+	return res.status(200).json(data)
 }
 
 export default Handler

@@ -2,8 +2,7 @@ import type { GetServerSideProps } from 'next'
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
 
-import { getProjects } from './api'
-
+import { getProjects } from '~/api'
 import Card from '~/components/Card'
 import type { INode } from '~/types'
 import { links, colorModeAtom } from '~/data'
@@ -51,7 +50,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					</p>
 				</Section>
 			</Container>
-			<Container large={true}>
+			<Container large>
 				<Section name="Projects 🔨">
 					<Grid>
 						{projects.map((projectProps) => (
@@ -64,25 +63,27 @@ const Home = ({ projects }: { projects: INode[] }) => {
 			{colorMode === 'light' ? (
 				<style global jsx>
 					{`
-					:root {
-						--fg: #000;
-						--bg: #fff;
-						--bg-alpha: #ffffff80;
-						--accent: #32b073;
-						--muted: #666666;
-						--light-gray: #d9d9d9;
+						:root {
+							--fg: #000;
+							--bg: #fff;
+							--bg-alpha: #ffffff80;
+							--accent: #32b073;
+							--muted: #666666;
+							--light-gray: #d9d9d9;
+						}
 					`}
 				</style>
 			) : (
 				<style global jsx>
 					{`
-					:root {
-						--fg: #fff;
-						--bg: #000;
-						--bg-alpha: #00000080;
-						--accent: #1fff92;
-						--muted: #999999;
-						--light-gray: #262626;
+						:root {
+							--fg: #fff;
+							--bg: #000;
+							--bg-alpha: #00000080;
+							--accent: #1fff92;
+							--muted: #999999;
+							--light-gray: #262626;
+						}
 					`}
 				</style>
 			)}
