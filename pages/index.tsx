@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from 'next'
 import { useAtom } from 'jotai'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { getProjects } from './api'
 
@@ -15,6 +15,7 @@ import Grid from '~/components/Grid'
 
 const Home = ({ projects }: { projects: INode[] }) => {
 	const [colorMode, setColorMode] = useAtom(colorModeAtom)
+	const [mounted, setMounted] = useState(false)
 
 	useEffect(() => {
 		setColorMode(
@@ -22,10 +23,11 @@ const Home = ({ projects }: { projects: INode[] }) => {
 				? 'dark'
 				: 'light'
 		)
+		setMounted(true)
 	}, [])
 
 	return (
-		<>
+		<div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
 			<Container>
 				<Section name="Hi! I'm Safin 👋" alternateClassName="hi">
 					<Links links={links} />
@@ -86,7 +88,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					`}
 				</style>
 			)}
-		</>
+		</div>
 	)
 }
 
