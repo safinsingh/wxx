@@ -67,8 +67,8 @@ const Home = ({ projects }: { projects: INode[] }) => {
 							--fg: #000;
 							--bg: #fff;
 							--bg-alpha: #ffffff80;
-							--accent: rgb(4, 120, 87);
-							--muted: #4b5563;
+							--accent: #32b073;
+							--muted: #4c5663;
 							--light-gray: #d9d9d9;
 						}
 					`}
@@ -80,8 +80,8 @@ const Home = ({ projects }: { projects: INode[] }) => {
 							--fg: #fff;
 							--bg: #000;
 							--bg-alpha: #00000080;
-							--accent: rgb(110, 231, 183);
-							--muted: #9ca3af;
+							--accent: #1fff92;
+							--muted: #76869c;
 							--light-gray: #262626;
 						}
 					`}
