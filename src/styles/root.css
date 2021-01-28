@@ -129,7 +129,7 @@ b {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	padding: 0.75rem 1rem;
+	padding: 1rem;
 }
 
 ._card:hover {
