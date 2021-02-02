@@ -1,21 +1,22 @@
-import { useAtom } from 'jotai'
+import type { Dispatch, SetStateAction } from 'react'
 
-import { colorModeAtom, reverseColorMode } from '~/data'
+import { reverseColorMode, toSentenceCase } from '~/data'
 
-const Footer = () => {
-	const [colorMode, setColorMode] = useAtom(colorModeAtom)
-
+const Footer: React.FC<{
+	colorMode: string
+	setColorMode: Dispatch<SetStateAction<string>>
+}> = ({ colorMode, setColorMode }) => {
 	return (
 		<div className="_footer_div">
 			<p className="_footer_p">
 				Safin Singh © 2021 | Built with Next &amp; 💚 |{' '}
 				<span
-					onClick={() => setColorMode(reverseColorMode(colorMode))}
+					onClick={() => {
+						setColorMode(reverseColorMode(colorMode))
+					}}
 					className="_footer_color_switch"
 				>
-					{reverseColorMode(colorMode).charAt(0).toUpperCase() +
-						reverseColorMode(colorMode).slice(1)}{' '}
-					Mode
+					{toSentenceCase(reverseColorMode(colorMode))} Mode
 				</span>
 			</p>
 		</div>

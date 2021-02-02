@@ -1,11 +1,10 @@
+import { useEffect, useState } from 'react'
 import type { GetServerSideProps } from 'next'
-import { useAtom } from 'jotai'
-import { useEffect } from 'react'
 
 import { getProjects } from '~/api'
 import Card from '~/components/Card'
 import type { INode } from '~/types'
-import { links, colorModeAtom } from '~/data'
+import { links } from '~/data'
 import Section from '~/components/Section'
 import Container from '~/components/Container'
 import Footer from '~/components/Footer'
@@ -13,16 +12,26 @@ import Links from '~/components/Links'
 import Grid from '~/components/Grid'
 
 const Home = ({ projects }: { projects: INode[] }) => {
-	const [colorMode, setColorMode] = useAtom(colorModeAtom)
+	const [colorMode, setColorMode] = useState('dark')
+	const [mounted, setMounted] = useState(false)
 
 	useEffect(() => {
-		setColorMode(
-			window.matchMedia('(prefers-color-scheme: dark)').matches
+		const mode =
+			window.localStorage.getItem('THEME') ??
+			(window.matchMedia('(prefers-color-scheme: dark)').matches
 				? 'dark'
-				: 'light'
-		)
+				: 'light')
+
+		setColorMode(mode)
+		setMounted(true)
 	}, [])
 
+	useEffect(() => {
+		localStorage.setItem('THEME', colorMode)
+	}, [colorMode])
+
+	// TODO: come up with something better to return here...
+	if (!mounted) return <></>
 	return (
 		<>
 			<Container>
@@ -59,34 +68,28 @@ const Home = ({ projects }: { projects: INode[] }) => {
 					</Grid>
 				</Section>
 			</Container>
-			<Footer />
-			{colorMode === 'light' ? (
-				<style global jsx>
-					{`
-						:root {
+			<Footer {...{ colorMode, setColorMode }} />
+			<style global jsx>
+				{`
+					:root {
+						${colorMode === 'light'
+							? `
 							--fg: #000;
 							--bg: #fff;
 							--bg-alpha: #ffffff80;
 							--accent: #32b073;
 							--muted: #666666;
-							--light-gray: #d9d9d9;
-						}
-					`}
-				</style>
-			) : (
-				<style global jsx>
-					{`
-						:root {
+							--light-gray: #d9d9d9;`
+							: `
 							--fg: #fff;
 							--bg: #000;
 							--bg-alpha: #00000080;
 							--accent: #1fff92;
 							--muted: #999999;
-							--light-gray: #262626;
-						}
-					`}
-				</style>
-			)}
+							--light-gray: #262626;`}
+					}
+				`}
+			</style>
 		</>
 	)
 }

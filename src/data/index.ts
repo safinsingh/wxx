@@ -1,5 +1,3 @@
-import { atom } from 'jotai'
-
 export const links = Object.entries({
 	github: 'https://github.com/safinsingh',
 	twitter: 'https://twitter.com/safinsingh',
@@ -28,6 +26,7 @@ export const query = `
 	}
 `
 
-export const colorModeAtom = atom<'light' | 'dark'>('light')
-export const reverseColorMode = (mode: 'light' | 'dark') =>
+export const reverseColorMode = (mode: string) =>
 	mode === 'light' ? 'dark' : 'light'
+export const toSentenceCase = (mode: string) =>
+	mode.charAt(0).toUpperCase() + mode.slice(1)

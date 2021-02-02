@@ -1,13 +1,11 @@
-import { Provider } from 'jotai'
-
 import Meta from '~/components/Meta'
-import '~/styles/root.css'
+import '~/styles/root.scss'
 
 const App = ({ Component, pageProps }) => (
-	<Provider>
+	<>
 		<Meta />
 		<Component {...pageProps} />
-	</Provider>
+	</>
 )
 
 export default App
