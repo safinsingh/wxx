@@ -4,7 +4,7 @@ import { query } from '~/data'
 import type { ApiResponse } from '~/types'
 
 export const getProjects = async () => {
-	const response = (await fetch('https://api.github.com/graphql', {
+	const { data: response } = await fetch('https://api.github.com/graphql', {
 		body: JSON.stringify({
 			query
 		}),
@@ -16,11 +16,11 @@ export const getProjects = async () => {
 		method: 'POST'
 	}).then((rawResponse) => {
 		return rawResponse.json()
-	})) as ApiResponse
+	})
 
 	return {
 		props: {
-			projects: response.repositoryOwner.itemShowcase.items.edges.map(
+			projects: (response as ApiResponse).repositoryOwner.itemShowcase.items.edges.map(
 				(edge) => edge.node
 			)
 		}
