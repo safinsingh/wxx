@@ -8,8 +8,8 @@
 		"dev": "next dev",
 		"fmt": "prettier --write '**/*.{js,ts,tsx,yml,scss,json}'",
 		"fmt:ci": "prettier --check '**/*.{js,ts,tsx,yml,scss,json}'",
-		"lint": "eslint '**/*.{js,ts,tsx}' --quiet --fix",
-		"lint:ci": "eslint '**/*.{js,ts,tsx}' --quiet",
+		"lint": "eslint '**/*.{js,ts,tsx}' --fix",
+		"lint:ci": "eslint '**/*.{js,ts,tsx}'",
 		"postinstall": "husky install"
 	},
 	"dependencies": {

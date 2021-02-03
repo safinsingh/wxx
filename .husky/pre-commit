@@ -1,8 +1,28 @@
 #!/bin/sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fail() {
+	printf "\033[1m\033[31m[ FAIL ]\033[0m %s\n" "$1"
+	exit 1
+}
 
-# shellcheck disable=SC1090
+info() {
+	printf "\033[1m\033[36m[ INFO ]\033[0m %s\n" "$1"
+}
+
+command -v pnpm >/dev/null 2>&1 || {
+	NVM=${1:-$HOME/.nvm/nvm.sh}
+
+	[ -f "$NVM" ] || fail "Please install \`pnpm\` globally!"
+
+	. "$HOME/.nvm/nvm.sh" || {
+		fail "Please install \`nvm\` or edit this pre-commit hook!"
+	}
+}
+
 . "$(dirname "$0")/_/husky.sh"
-pnpm run fmt:ci && pnpm run lint:ci
+
+info "Running \`fmt\` check..."
+pnpm run fmt:ci >/dev/null
+
+info "Running \`lint\` check..."
+pnpm run lint:ci >/dev/null
