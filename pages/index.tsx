@@ -8,11 +8,11 @@ import Grid from '~/components/Grid'
 import Links from '~/components/Links'
 import Section from '~/components/Section'
 import { links } from '~/data'
+import { darkTheme, lightTheme } from '~/styles/theme'
 import type { INode } from '~/types'
 
-const Home = ({ projects }: { projects: INode[] }) => {
-	const [colorMode, setColorMode] = useState('dark')
-	const [mounted, setMounted] = useState(false)
+const Home: React.FC<{ projects: INode[] }> = ({ projects }) => {
+	const [colorMode, setColorMode] = useState(undefined)
 
 	useEffect(() => {
 		const mode =
@@ -22,18 +22,13 @@ const Home = ({ projects }: { projects: INode[] }) => {
 				: 'light')
 
 		setColorMode(mode)
-		setMounted(true)
 	}, [])
 
 	useEffect(() => {
 		localStorage.setItem('THEME', colorMode)
 	}, [colorMode])
 
-	// eslint-disable-next-line no-warning-comments
-	// TODO: come up with something better to return here...
-	if (!mounted) {
-		return <></>
-	}
+	if (!colorMode) return null
 
 	return (
 		<>
@@ -65,9 +60,9 @@ const Home = ({ projects }: { projects: INode[] }) => {
 			<Container large>
 				<Section name="Projects 🔨">
 					<Grid>
-						{projects.map((projectProps) => {
-							return <Card {...projectProps} key={projectProps.name} />
-						})}
+						{projects.map((projectProps) => (
+							<Card {...projectProps} key={projectProps.name} />
+						))}
 					</Grid>
 				</Section>
 			</Container>
@@ -75,21 +70,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 			<style global jsx>
 				{`
 					:root {
-						${colorMode === 'light'
-							? `
-							--fg: #000;
-							--bg: #fff;
-							--bg-alpha: #ffffff80;
-							--accent: #32b073;
-							--muted: #666666;
-							--light-gray: #d9d9d9;`
-							: `
-							--fg: #fff;
-							--bg: #000;
-							--bg-alpha: #00000080;
-							--accent: #1fff92;
-							--muted: #999999;
-							--light-gray: #262626;`}
+						${colorMode === 'light' ? lightTheme : darkTheme}
 					}
 				`}
 			</style>
