@@ -35,7 +35,7 @@ module.exports = {
 			}
 		},
 		{
-			files: ['_*.tsx', '.*.js'],
+			files: ['_*.tsx', '.*.js', '*.d.ts'],
 			rules: {
 				'filenames/match-regex': 'off'
 			}

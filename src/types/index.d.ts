@@ -1,4 +1,4 @@
-export type INode = {
+export type Project = {
 	name: string
 	description: string
 	url: string
@@ -9,7 +9,7 @@ export type ApiResponse = {
 		itemShowcase: {
 			items: {
 				edges: Array<{
-					node: INode
+					node: Project
 				}>
 			}
 		}

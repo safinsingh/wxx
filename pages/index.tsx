@@ -9,9 +9,9 @@ import Links from '~/components/Links'
 import Section from '~/components/Section'
 import { links } from '~/data'
 import { darkTheme, lightTheme } from '~/styles/theme'
-import type { INode } from '~/types'
+import type { Project } from '~/types'
 
-const Home: React.FC<{ projects: INode[] }> = ({ projects }) => {
+const Home: React.FC<{ projects: Project[] }> = ({ projects }) => {
 	const [colorMode, setColorMode] = useState(undefined)
 
 	useEffect(() => {

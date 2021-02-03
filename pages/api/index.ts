@@ -1,10 +1,10 @@
-import fetch from 'isomorphic-unfetch'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiResponse } from 'next'
+import fetch from 'node-fetch'
 import { query } from '~/data'
 import type { ApiResponse } from '~/types'
 
 export const getProjects = async () => {
-	const projects = await fetch('https://api.github.com/graphql', {
+	const response = (await fetch('https://api.github.com/graphql', {
 		body: JSON.stringify({
 			query
 		}),
@@ -14,25 +14,20 @@ export const getProjects = async () => {
 			'Content-Type': 'application/json'
 		},
 		method: 'POST'
-	}).then((response) => {
-		return response.json()
-	})
+	}).then((rawResponse) => {
+		return rawResponse.json()
+	})) as ApiResponse
 
 	return {
 		props: {
-			projects: (projects.data as ApiResponse).repositoryOwner.itemShowcase.items.edges.map(
-				(edge) => {
-					return edge.node
-				}
+			projects: response.repositoryOwner.itemShowcase.items.edges.map(
+				(edge) => edge.node
 			)
 		}
 	}
 }
 
-const Handler = async (_: NextApiRequest, response: NextApiResponse) => {
+export default async (_: unknown, response: NextApiResponse) => {
 	const { props: data } = await getProjects()
-
 	response.status(200).json(data)
 }
-
-export default Handler
