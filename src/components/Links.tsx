@@ -1,13 +1,15 @@
 const Links = ({ links }: { links: string[][] }) => (
 	<div className="_links">
-		{links.map(([k, v], idx) => (
-			<span key={k} className="_link_wrapper">
-				<a href={v} className="_social_link">
-					~{k}
-				</a>
-				{idx !== links.length - 1 && ' · '}
-			</span>
-		))}
+		{links.map(([key, value], index) => {
+			return (
+				<span className="_link_wrapper" key={key}>
+					<a className="_social_link" href={value}>
+						~{key}
+					</a>
+					{index !== links.length - 1 && ' · '}
+				</span>
+			)
+		})}
 	</div>
 )
 

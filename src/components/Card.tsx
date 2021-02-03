@@ -7,7 +7,7 @@ const Card = ({
 	description: string
 	url: string
 }) => (
-	<a href={url} target="_blank">
+	<a href={url} rel="noreferrer" target="_blank">
 		<div className="_card">
 			<h2>{name}</h2>
 			<p>{description}</p>

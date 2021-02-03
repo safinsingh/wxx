@@ -8,91 +8,91 @@ const Meta = () => (
 
 		{/* SEO */}
 		<meta
-			name="description"
 			content="Full-stack Developer, Cybersecurity Competitor, High School Student"
+			name="description"
 		/>
-		<meta name="author" content="Safin Singh" />
+		<meta content="Safin Singh" name="author" />
 		<meta
-			name="keywords"
 			content="Safin, Singh, Safin Singh, safinsingh, paradox"
+			name="keywords"
 		/>
 
 		{/* Open Graph */}
 		<meta
-			property="og:description"
 			content="Web developer and cybersecurity competitor."
+			property="og:description"
 		/>
-		<meta property="og:url" content="https://safin.dev" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Safin Singh" />
-		<meta property="og:site_name" content="Safin Singh" />
-		<meta property="og:image" content="/favicon.png" />
-		<meta property="og:image:alt" content="/favicon.png" />
-		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="512" />
-		<meta property="og:image:height" content="512" />
-		<meta property="og:locale" content="en_US" />
+		<meta content="https://safin.dev" property="og:url" />
+		<meta content="website" property="og:type" />
+		<meta content="Safin Singh" property="og:title" />
+		<meta content="Safin Singh" property="og:site_name" />
+		<meta content="/favicon.png" property="og:image" />
+		<meta content="/favicon.png" property="og:image:alt" />
+		<meta content="image/png" property="og:image:type" />
+		<meta content="512" property="og:image:width" />
+		<meta content="512" property="og:image:height" />
+		<meta content="en_US" property="og:locale" />
 
 		{/* Twitter */}
 		<meta
+			content="Web developer and cybersecurity competitor."
 			name="twitter:card"
-			content="Web developer and cybersecurity competitor."
 		/>
-		<meta name="twitter:url" content="https://safin.dev" />
-		<meta name="twitter:title" content="Safin Singh" />
+		<meta content="https://safin.dev" name="twitter:url" />
+		<meta content="Safin Singh" name="twitter:title" />
 		<meta
-			name="twitter:description"
 			content="Web developer and cybersecurity competitor."
+			name="twitter:description"
 		/>
-		<meta name="twitter:image" content="/favicon.png" />
+		<meta content="/favicon.png" name="twitter:image" />
 
 		{/* WeChat */}
-		<meta itemProp="name" content="Safin Singh" />
-		<meta itemProp="image" content="/favicon.png" />
+		<meta content="Safin Singh" itemProp="name" />
+		<meta content="/favicon.png" itemProp="image" />
 		<meta
-			name="description"
-			itemProp="description"
 			content="Web developer and cybersecurity competitor."
+			itemProp="description"
+			name="description"
 		/>
 
 		{/* Apple */}
-		<link rel="apple-touch-icon" href="/favicon.png" />
-		<link rel="apple-touch-startup-image" href="/favicon.png" />
-		<meta name="apple-mobile-web-app-title" content="Safin Singh" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link href="/favicon.png" rel="apple-touch-icon" />
+		<link href="/favicon.png" rel="apple-touch-startup-image" />
+		<meta content="Safin Singh" name="apple-mobile-web-app-title" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
 
 		{/* IE */}
-		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
+		<meta content="ie=edge" httpEquiv="x-ua-compatible" />
 
 		{/* QQ */}
-		<meta name="x5-orientation" content="portrait" />
-		<meta name="x5-fullscreen" content="true" />
+		<meta content="portrait" name="x5-orientation" />
+		<meta content="true" name="x5-fullscreen" />
 
 		{/* UC Mobile */}
-		<meta name="screen-orientation" content="portrait" />
-		<meta name="full-screen" content="yes" />
-		<meta name="wap-font-scale" content="no" />
+		<meta content="portrait" name="screen-orientation" />
+		<meta content="yes" name="full-screen" />
+		<meta content="no" name="wap-font-scale" />
 
 		{/* Icons */}
-		<meta name="image" content="/favicon.png" />
-		<link rel="icon" href="/favicon.png" />
+		<meta content="/favicon.png" name="image" />
+		<link href="/favicon.png" rel="icon" />
 
 		{/* Misc */}
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<link rel="canonical" href="https://safin.dev" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<meta content="#000000" name="theme-color" />
+		<link href="https://safin.dev" rel="canonical" />
 
 		{/* External Dependencies */}
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.gstatic.com" rel="preconnect" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
 			rel="stylesheet"
 		/>
 		<link
-			rel="stylesheet"
+			crossOrigin="anonymous"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
 			integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-			crossOrigin="anonymous"
+			rel="stylesheet"
 		/>
 	</Head>
 )

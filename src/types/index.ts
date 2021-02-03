@@ -1,10 +1,10 @@
-export interface INode {
+export type INode = {
 	name: string
 	description: string
 	url: string
 }
 
-export interface ApiResponse {
+export type ApiResponse = {
 	repositoryOwner: {
 		itemShowcase: {
 			items: {

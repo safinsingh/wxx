@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react'
 import type { GetServerSideProps } from 'next'
-
+import { useEffect, useState } from 'react'
 import { getProjects } from '~/api'
 import Card from '~/components/Card'
-import type { INode } from '~/types'
-import { links } from '~/data'
-import Section from '~/components/Section'
 import Container from '~/components/Container'
 import Footer from '~/components/Footer'
-import Links from '~/components/Links'
 import Grid from '~/components/Grid'
+import Links from '~/components/Links'
+import Section from '~/components/Section'
+import { links } from '~/data'
+import type { INode } from '~/types'
 
 const Home = ({ projects }: { projects: INode[] }) => {
 	const [colorMode, setColorMode] = useState('dark')
@@ -30,12 +29,16 @@ const Home = ({ projects }: { projects: INode[] }) => {
 		localStorage.setItem('THEME', colorMode)
 	}, [colorMode])
 
+	// eslint-disable-next-line no-warning-comments
 	// TODO: come up with something better to return here...
-	if (!mounted) return <></>
+	if (!mounted) {
+		return <></>
+	}
+
 	return (
 		<>
 			<Container>
-				<Section name="Hi! I'm Safin 👋" alternateClassName="hi">
+				<Section alternateClassName="hi" name="Hi! I'm Safin 👋">
 					<Links links={links} />
 				</Section>
 				<Section name="About ✨">
@@ -53,7 +56,7 @@ const Home = ({ projects }: { projects: INode[] }) => {
 						I’m currently not looking for internships at the moment, but I will
 						be in the summer of <b>2021</b>. In the meantime, feel free to shoot
 						me an{' '}
-						<a href="mailto:safin.singh@gmail.com" className="_email">
+						<a className="_email" href="mailto:safin.singh@gmail.com">
 							email!
 						</a>
 					</p>
@@ -62,9 +65,9 @@ const Home = ({ projects }: { projects: INode[] }) => {
 			<Container large>
 				<Section name="Projects 🔨">
 					<Grid>
-						{projects.map((projectProps) => (
-							<Card {...projectProps} key={projectProps.name} />
-						))}
+						{projects.map((projectProps) => {
+							return <Card {...projectProps} key={projectProps.name} />
+						})}
 					</Grid>
 				</Section>
 			</Container>
