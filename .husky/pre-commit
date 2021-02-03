@@ -14,8 +14,8 @@ command -v pnpm >/dev/null 2>&1 || {
 
 	[ -f "$NVM" ] || fail "Please install \`pnpm\` globally!"
 
-	. "$HOME/.nvm/nvm.sh" || {
-		fail "Please install \`nvm\` or edit this pre-commit hook!"
+	. "$NVM" || {
+		fail "Please install \`nvm\`!"
 	}
 }
 
