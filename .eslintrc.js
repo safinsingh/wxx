@@ -1,3 +1,4 @@
+/** @type {import('@types/eslint').Linter.Config} */
 module.exports = {
 	extends: [
 		'canonical',
@@ -23,25 +24,41 @@ module.exports = {
 			files: ['*.d.ts'],
 			rules: {
 				'import/unambiguous': 'off',
-				'spaced-comment': 'off'
+				'spaced-comment': 'off',
+				'unicorn/prevent-abbreviations': 'off'
+			}
+		},
+		{
+			files: ['_document.tsx'],
+			rules: {
+				'fp/no-class': 'off'
+			}
+		},
+		{
+			files: ['_*.tsx', '.*.js'],
+			rules: {
+				'filenames/match-regex': 'off'
+			}
+		},
+		{
+			files: ['src/api/*.ts'],
+			rules: {
+				'unicorn/prevent-abbreviations': 'off'
 			}
 		}
 	],
 	parserOptions: {
 		project: './tsconfig.eslint.json'
 	},
+	root: true,
 	rules: {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/triple-slash-reference': 'off',
 		'filenames/match-exported': 'off',
-		'filenames/match-regex': 'off',
-		'fp/no-class': 'off',
-		'no-inline-comments': 'off',
 		'node/no-missing-import': 'off',
 		'node/no-process-env': 'off',
 		'prettier/prettier': 'error',
-		'react/prop-types': 'off',
-		'unicorn/prevent-abbreviations': 'off'
+		'react/prop-types': 'off'
 	},
 	settings: {
 		'import/resolver': {
