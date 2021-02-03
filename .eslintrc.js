@@ -1,6 +1,3 @@
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
-
 module.exports = {
 	extends: [
 		'canonical',
@@ -8,9 +5,27 @@ module.exports = {
 		'canonical/node',
 		'canonical/react',
 		'plugin:prettier/recommended',
-		'prettier/react',
 		'prettier/@typescript-eslint',
+		'prettier/react',
 		'prettier/babel'
+	],
+	overrides: [
+		{
+			files: ['*.js'],
+			rules: {
+				'@typescript-eslint/no-require-imports': 'off',
+				'@typescript-eslint/no-var-requires': 'off',
+				'import/no-commonjs': 'off',
+				'import/unambiguous': 'off'
+			}
+		},
+		{
+			files: ['*.d.ts'],
+			rules: {
+				'import/unambiguous': 'off',
+				'spaced-comment': 'off'
+			}
+		}
 	],
 	parserOptions: {
 		project: './tsconfig.eslint.json'
@@ -25,7 +40,8 @@ module.exports = {
 		'node/no-missing-import': 'off',
 		'node/no-process-env': 'off',
 		'prettier/prettier': 'error',
-		'react/prop-types': 'off'
+		'react/prop-types': 'off',
+		'unicorn/prevent-abbreviations': 'off'
 	},
 	settings: {
 		'import/resolver': {

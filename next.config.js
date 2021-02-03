@@ -1,10 +1,4 @@
-/* RIP */
-/* eslint-disable @typescript-eslint/no-require-imports */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
-/* eslint-disable @typescript-eslint/unbound-method */
-
+// eslint-disable-next-line @typescript-eslint/unbound-method
 const { resolve } = require('path')
 
 /** @type {import('next/dist/next-server/server/config').NextConfig} */
