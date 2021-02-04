@@ -18,16 +18,12 @@ export const getProjects = async () => {
 		return rawResponse.json()
 	})
 
-	return {
-		props: {
-			projects: (response as ApiResponse).repositoryOwner.itemShowcase.items.edges.map(
-				(edge) => edge.node
-			)
-		}
-	}
+	return (response as ApiResponse).repositoryOwner.itemShowcase.items.edges.map(
+		(edge) => edge.node
+	)
 }
 
 export default async (_: unknown, response: NextApiResponse) => {
-	const { props: data } = await getProjects()
+	const data = await getProjects()
 	response.status(200).json(data)
 }

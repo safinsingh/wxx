@@ -9,7 +9,7 @@ body,
 	font-family: 'Inter', sans-serif !important;
 	box-sizing: border-box;
 	text-decoration: none !important;
-	transition: all 0.2s;
+	transition: all 0.15s;
 }
 
 body,
@@ -60,17 +60,19 @@ p {
 ._container {
 	display: flex;
 	flex-direction: column;
-	max-width: 32rem;
+	max-width: 33rem;
 	margin: 0 auto;
 	padding: 0rem 1rem;
 }
 
-._container_large {
-	max-width: 40rem;
-}
-
 ._section_hi {
 	margin-top: 2rem;
+}
+
+@media screen and(max-width: 500px) {
+	._section_hi {
+		margin-top: 1rem;
+	}
 }
 
 ._links {
@@ -97,8 +99,7 @@ b {
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-auto-rows: 1fr;
 	gap: 0.75rem;
-	margin-top: 1rem;
-	margin-bottom: 4rem;
+	margin: 1rem 0rem;
 }
 
 ._card {
@@ -134,4 +135,98 @@ b {
 
 ._footer_color_switch {
 	cursor: pointer;
+}
+
+._bottom {
+	margin-bottom: 4rem;
+}
+
+._post_date {
+	color: var(--muted);
+	font-weight: 300;
+	text-align: center;
+	margin: 0.75rem 0rem 1.5rem 0rem;
+}
+
+._post_body {
+	line-height: 1.25rem;
+}
+
+pre {
+	background-color: var(--bg-color) !important;
+	display: block;
+	border: 1px solid var(--light-gray);
+	padding: 0.5rem;
+	margin: 1rem 0rem;
+	border-radius: 0.25rem;
+}
+
+code {
+	line-height: 1.5em !important;
+	overflow-wrap: break-word;
+	text-shadow: none !important;
+}
+
+pre *,
+code * {
+	white-space: pre-wrap;
+	word-wrap: normal;
+	word-break: normal;
+	hyphens: none;
+	overflow: auto;
+}
+
+pre span {
+	font-family: 'Fira Mono', monospace !important;
+	font-size: 0.9rem !important;
+	tab-size: 1rem;
+}
+
+._section_posts {
+	margin-top: 0.5rem;
+	margin-bottom: 4rem;
+}
+
+._post_body a {
+	color: var(--accent) !important;
+	text-decoration: none;
+}
+
+._post_body img {
+	width: 100%;
+	padding: 0.5rem 0rem;
+}
+
+hr {
+	height: 1px;
+	width: 100%;
+	background-color: var(--light-gray);
+	border: none;
+	margin-bottom: 1rem;
+}
+
+._section_posts h1 {
+	margin-bottom: 1rem;
+}
+
+._post_frag_title {
+	color: var(--fg);
+}
+
+._post_frag_date {
+	color: var(--muted);
+}
+
+._clickable {
+	cursor: pointer;
+}
+
+._post_frag_date {
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+ul,
+li {
+	color: var(--muted);
 }

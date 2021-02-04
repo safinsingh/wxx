@@ -15,3 +15,16 @@ export type ApiResponse = {
 		}
 	}
 }
+
+export type PostMeta = {
+	date: Date
+	title: string
+}
+
+export type PostFragment = PostMeta & {
+	id: string
+}
+
+export type Post = PostFragment & {
+	innerMD: string
+}
