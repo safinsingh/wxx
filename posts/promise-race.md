@@ -3,7 +3,7 @@ title: 'Using racing promises as a timeout'
 date: '2021-02-04'
 ---
 
-Here's a cool little snippet I came across on [LogRocket's Blog](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/):
+Here's a cool little snippet I came across on [LogRocket's Blog](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/) the other day:
 
 ```typescript
 // create a promise that resolves in `ms`
@@ -17,9 +17,9 @@ function timeout(ms: number): Promise<never> {
 async function fetchPriceWithTimeout(
 	tickerSymbol: string
 ): Promise<number> {
-	// race the fetcher with some timeout promise
+	// race the fetcher with some timeout promise.
 	// this will ensure that fetchStock resolves in
-	// less than 3000 milliseconds otherwise this
+	// less than 3000 milliseconds; otherwise, the
 	// function will throw an Error
 	const stock = await Promise.race([
 		fetchStock(tickerSymbol),
@@ -29,7 +29,7 @@ async function fetchPriceWithTimeout(
 }
 ```
 
-However, this snippet was specific to the scenaria that the blog was describing, so I generalized it with:
+However, this snippet was specific to the scenario that the blog was describing; here's a more general form (using TypeScript's generics):
 
 ```typescript
 async function withTimeout<R>(
@@ -37,8 +37,9 @@ async function withTimeout<R>(
 	timeout: number,
 	message = 'Timeout!'
 ): Promise<R> {
-	// return already `await`s the promise returned
-	// by Promise.race()
+	// return `await`s the promise returned
+	// by Promise.race(); no need to use it
+  // explicitly here
 	return Promise.race([
 		fn(),
 		new Promise((_, reject) => {
@@ -48,14 +49,14 @@ async function withTimeout<R>(
 }
 ```
 
-Now, you can conveniently encapsulate timeout-sensitive functions like so:
+Using this abstraction, you can conveniently encapsulate timeout-sensitive functions like so:
 
 ```typescript
 async function mustTimeOut() {
 	await withTimeout(() => {
 		return new Promise((resolve, _) => {
 			setTimeout(
-				() => resolve(new Error('will time out!')),
+				() => resolve('will time out!'),
 				4000
 			)
 		})
