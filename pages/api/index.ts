@@ -1,6 +1,6 @@
 import type { NextApiResponse } from 'next'
 import fetch from 'node-fetch'
-import { query } from '~/data'
+import { defaultProjects, query } from '~/data'
 import type { ApiResponse } from '~/types'
 
 export const getProjects = async () => {
@@ -18,8 +18,10 @@ export const getProjects = async () => {
 		return rawResponse.json()
 	})
 
-	return (response as ApiResponse).repositoryOwner.itemShowcase.items.edges.map(
-		(edge) => edge.node
+	return (
+		(response as ApiResponse)?.repositoryOwner.itemShowcase.items.edges.map(
+			(edge) => edge.node
+		) ?? defaultProjects()
 	)
 }
 
