@@ -51,6 +51,12 @@ module.exports = {
 			rules: {
 				'unicorn/prevent-abbreviations': 'off'
 			}
+		},
+		{
+			files: ['*.tsx'],
+			rules: {
+				'react/forbid-component-props': 'off'
+			}
 		}
 	],
 	parserOptions: {

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import Container from '~/components/Container'
-import Footer from '~/components/Footer'
 import Section from '~/components/Section'
 import { getSinglePost, getAllPosts } from '~/posts'
 import { useThemeContext } from '~/state'
@@ -18,7 +17,6 @@ const CodeBlock: React.FC<{ language: string; value: string }> = ({
 	return (
 		<SyntaxHighlighter
 			language={language}
-			// eslint-disable-next-line react/forbid-component-props
 			style={theme === 'light' ? light : dark}
 		>
 			{value}
@@ -33,7 +31,6 @@ const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 		<Section alternateClassName="hi _bottom" name={post.title}>
 			<h2 className="_post_date">{post.date}</h2>
 			<ReactMarkdown
-				// eslint-disable-next-line react/forbid-component-props
 				className="_post_body"
 				escapeHtml={false}
 				renderers={{ code: CodeBlock }}
