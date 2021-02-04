@@ -5,22 +5,21 @@ fail() {
 	printf "\033[1m\033[31m[ %s ]\033[0m %s\n" "FAIL" "$*"
 }
 
+info() {
+	printf "\033[1m\033[36m[ %s ]\033[0m %s\n" "INFO" "$*"
+}
+
 die() {
 	fail "$*"
 	exit 1
-}
-
-info() {
-	printf "\033[1m\033[31m[ %s ]\033[0m %s\n" "INFO" "$*"
 }
 
 : assert that the pnpm cmd exists
 pnpm_installed() {
 	if command -v pnpm >/dev/null 2>&1; then
 		return 0
-	else
-		return 1
 	fi
+	return 1
 }
 
 : assume that pnpm not being installed
@@ -42,9 +41,15 @@ pnpm_installed || {
 : invoke husky git hook helper
 . "$(dirname "$0")/_/husky.sh"
 
-: begin repository checks
-info "Running \`fmt\` check..."
-pnpm run fmt:ci >/dev/null
+: begin repository checks concurrently
+{
+	info "Running \`fmt\` check..."
+	pnpm run fmt:ci >/dev/null
+} &
 
-info "Running \`lint\` check..."
-pnpm run lint:ci >/dev/null
+{
+	info "Running \`lint\` check..."
+	pnpm run lint:ci >/dev/null
+} &
+
+wait && info "Done!"
