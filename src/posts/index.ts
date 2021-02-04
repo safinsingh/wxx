@@ -8,15 +8,17 @@ const postDirectory = resolve(process.cwd(), 'posts')
 export const getPosts = async () => {
 	const files = await fs.readdir(postDirectory)
 	const metadata: PostFragment[] = await Promise.all(
-		files.map(async (file) => {
-			const raw = await fs.readFile(join(postDirectory, file))
-			const matterInner = matter(raw.toString())
+		files
+			.filter((file) => file.endsWith('.md'))
+			.map(async (file) => {
+				const raw = await fs.readFile(join(postDirectory, file))
+				const matterInner = matter(raw.toString())
 
-			return {
-				id: file.replace(/\.md$/, ''),
-				...(matterInner.data as PostMeta)
-			}
-		})
+				return {
+					id: file.replace(/\.md$/, ''),
+					...(matterInner.data as PostMeta)
+				}
+			})
 	)
 
 	return metadata.sort((a, b) => {
