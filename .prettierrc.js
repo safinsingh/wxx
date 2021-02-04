@@ -5,6 +5,6 @@ module.exports = {
 	printWidth: 80,
 	semi: false,
 	useTabs: true,
-	proseWrap: 'always',
+	proseWrap: 'never',
 	endOfLine: 'lf'
 }
