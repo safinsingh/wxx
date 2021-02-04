@@ -39,7 +39,7 @@ async function withTimeout<R>(
 ): Promise<R> {
 	// return `await`s the promise returned
 	// by Promise.race(); no need to use it
-  // explicitly here
+	// explicitly here
 	return Promise.race([
 		fn(),
 		new Promise((_, reject) => {
