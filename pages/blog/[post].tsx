@@ -27,7 +27,7 @@ const CodeBlock: React.FC<{ language: string; value: string }> = ({
 const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	post
 }) => (
-	<Container>
+	<Container large>
 		<Section alternateClassName="hi _bottom" name={post.title}>
 			<h2 className="_post_date">{post.date}</h2>
 			<ReactMarkdown
