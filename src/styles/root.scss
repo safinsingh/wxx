@@ -172,7 +172,9 @@ code {
 }
 
 pre *,
-code * {
+code *,
+pre,
+code {
 	white-space: pre-wrap;
 	word-wrap: normal;
 	word-break: normal;
@@ -180,7 +182,8 @@ code * {
 	overflow: auto;
 }
 
-pre span {
+pre span,
+code {
 	font-family: 'Fira Mono', monospace !important;
 	font-size: 0.9rem !important;
 	tab-size: 1rem;
@@ -219,6 +222,7 @@ hr {
 
 ._post_frag_date {
 	color: var(--muted);
+	margin-bottom: 1rem;
 }
 
 ._clickable {
@@ -231,6 +235,30 @@ hr {
 }
 
 ul,
+ol,
 li {
 	color: var(--muted);
+}
+
+ol {
+	list-style-type: decimal;
+	margin: 1rem 0rem;
+}
+
+li {
+	line-height: 1.5rem;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+._post_body p {
+	margin: 1rem 0rem;
 }
