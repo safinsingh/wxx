@@ -45,7 +45,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 		</Section>
 		<Section name="Posts 📜">
 			{postData.slice(0, 3).map((frag) => (
-				<Link href={`/blog/${frag.id}`}>
+				<Link href={`/posts/${frag.id}`}>
 					<div className="_clickable">
 						<h2 className="_post_frag_title">{frag.title}</h2>
 						<h3 className="_post_frag_date">{frag.date}</h3>
