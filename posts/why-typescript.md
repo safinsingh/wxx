@@ -92,7 +92,7 @@ $ tsc index.ts
 Argument of type 'number' is not assignable to parameter of type '{ a: { nested: { property: number; }; }; }'.
 ```
 
-We can see that our program didn't even execute! This is because the inferred type of our variable did not math the signature of the parameter. Obviously, this is a huge improvement over having the program run and crash mid-way.
+We can see that our program didn't even execute! This is because the inferred type of our variable did not match the signature of the parameter. Obviously, this is a huge improvement over having the program run and crash mid-way.
 
 Let's correct the code so we can conclude on a satisfying note:
 
