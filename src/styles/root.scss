@@ -167,7 +167,6 @@ pre {
 
 code {
 	line-height: 1.5em !important;
-	overflow-wrap: break-word;
 	text-shadow: none !important;
 }
 
@@ -175,11 +174,18 @@ pre *,
 code *,
 pre,
 code {
-	white-space: pre-wrap;
 	word-wrap: normal;
 	word-break: normal;
 	hyphens: none;
 	overflow: auto;
+}
+
+.token {
+	display: inline;
+}
+
+code {
+	width: 100%;
 }
 
 pre span,
@@ -242,7 +248,10 @@ li {
 
 ol {
 	list-style-type: decimal;
+	list-style-position: inside;
 	margin: 1rem 0rem;
+	text-indent: -1.25rem;
+	padding-left: 1.25rem;
 }
 
 li {
@@ -261,4 +270,5 @@ i {
 
 ._post_body p {
 	margin: 1rem 0rem;
+	line-height: 1.5rem;
 }

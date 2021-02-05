@@ -120,7 +120,7 @@ onObject(someObject)
 
 And then:
 
-```shell
+```text
 # or ts-node, etc
 $ tsc index.ts
 $ node index.js

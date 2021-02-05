@@ -42,10 +42,7 @@ export const light = {
 		color: '#6182b8'
 	},
 	'code[class*="language-"]': {
-		color: '#90a4ae',
-		wordBreak: 'normal',
-		wordSpacing: 'normal',
-		wordWrap: 'normal'
+		color: '#90a4ae'
 	},
 	'code[class*="language-"] ::-moz-selection': {
 		background: '#cceae7',
@@ -106,11 +103,7 @@ export const light = {
 	},
 	'pre[class*="language-"]': {
 		color: '#90a4ae',
-		fontSize: '1em',
-		whiteSpace: 'pre',
-		wordBreak: 'normal',
-		wordSpacing: 'normal',
-		wordWrap: 'normal'
+		fontSize: '1em'
 	},
 	'pre[class*="language-"] ::-moz-selection': {
 		background: '#cceae7',
@@ -201,11 +194,7 @@ export const dark = {
 		color: '#f8c555'
 	},
 	'code[class*="language-"]': {
-		color: '#ccc',
-		whiteSpace: 'pre',
-		wordBreak: 'normal',
-		wordSpacing: 'normal',
-		wordWrap: 'normal'
+		color: '#ccc'
 	},
 	comment: {
 		color: '#999'
@@ -252,11 +241,7 @@ export const dark = {
 		color: '#67cdcc'
 	},
 	'pre[class*="language-"]': {
-		color: '#ccc',
-		whiteSpace: 'pre',
-		wordBreak: 'normal',
-		wordSpacing: 'normal',
-		wordWrap: 'normal'
+		color: '#ccc'
 	},
 	prolog: {
 		color: '#999'
