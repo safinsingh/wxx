@@ -44,7 +44,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getServerSideProps>> = ({
 			</Grid>
 		</Section>
 		<Section name="Posts 📜">
-			{postData?.slice(0, 3).map((frag) => (
+			{postData.slice(0, 3).map((frag) => (
 				<Link href={`/posts/${frag.id}`} key={frag.id}>
 					<div className="_clickable">
 						<h2 className="_post_frag_title">{frag.title}</h2>

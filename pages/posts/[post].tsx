@@ -53,7 +53,7 @@ export const getStaticProps = async ({ params: { post } }) => ({
 
 export const getStaticPaths = async () => {
 	return {
-		fallback: true,
+		fallback: false,
 		paths: await getAllPosts()
 	}
 }
