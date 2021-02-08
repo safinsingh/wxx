@@ -1,4 +1,4 @@
-import type { InferGetStaticPropsType } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
 import { getProjects } from '~/api'
 import Card from '~/components/Card'
@@ -9,7 +9,7 @@ import Section from '~/components/Section'
 import { links } from '~/data'
 import { getPosts } from '~/posts'
 
-const Home: React.FC<InferGetStaticPropsType<typeof getServerSideProps>> = ({
+const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	projects,
 	postData
 }) => (
@@ -56,11 +56,12 @@ const Home: React.FC<InferGetStaticPropsType<typeof getServerSideProps>> = ({
 	</Container>
 )
 
-export const getServerSideProps = async () => ({
+export const getStaticProps: GetStaticProps = async () => ({
 	props: {
 		postData: await getPosts(),
 		projects: await getProjects()
-	}
+	},
+	revalidate: 1
 })
 
 export default Home

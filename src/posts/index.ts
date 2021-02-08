@@ -1,9 +1,9 @@
 import { promises as fs } from 'fs'
-import { resolve, join } from 'path'
+import { join } from 'path'
 import matter from 'gray-matter'
 import type { Post, PostFragment, PostMeta } from '~/types'
 
-const postDirectory = resolve(process.cwd(), 'posts')
+const postDirectory = join(process.cwd(), 'posts')
 
 export const getPosts = async () => {
 	const files = await fs.readdir(postDirectory)
