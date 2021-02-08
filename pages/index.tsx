@@ -9,7 +9,7 @@ import Section from '~/components/Section'
 import { links } from '~/data'
 import { getPosts } from '~/posts'
 
-const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const Home: React.FC<InferGetStaticPropsType<typeof getServerSideProps>> = ({
 	projects,
 	postData
 }) => (
@@ -56,13 +56,12 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	</Container>
 )
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	return {
 		props: {
 			postData: await getPosts(),
 			projects: await getProjects()
-		},
-		revalidate: 1
+		}
 	}
 }
 
