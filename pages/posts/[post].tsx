@@ -1,18 +1,19 @@
 import type { InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
+import { useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import Container from '~/components/Container'
 import Section from '~/components/Section'
+import { ThemeContext } from '~/components/ThemeProvider'
 import { getSinglePost, getAllPosts } from '~/posts'
-import { useThemeContext } from '~/state'
-import { dark, light } from '~/styles/code'
+import { dark, light } from '~/styles'
 
 const CodeBlock: React.FC<{ language: string; value: string }> = ({
 	language,
 	value
 }) => {
-	const { theme } = useThemeContext()
+	const { theme } = useContext(ThemeContext)
 
 	return (
 		<SyntaxHighlighter
