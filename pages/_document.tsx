@@ -2,6 +2,7 @@
 
 import type { DocumentContext } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { ThemeScript } from '~/components/ThemeScript'
 
 export default class extends Document {
 	public static async getInitialProps(context: DocumentContext) {
@@ -17,6 +18,7 @@ export default class extends Document {
 				<body>
 					<Main />
 					<NextScript />
+					<ThemeScript />
 				</body>
 			</Html>
 		)

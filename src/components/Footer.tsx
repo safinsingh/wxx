@@ -1,8 +1,9 @@
+import { useContext } from 'react'
+import { ThemeContext } from './ThemeProvider'
 import { reverseColorMode, toSentenceCase } from '~/data'
-import { useThemeContext } from '~/state'
 
 const Footer = () => {
-	const { theme, setTheme } = useThemeContext()
+	const { theme, setTheme } = useContext(ThemeContext)
 
 	return (
 		<div className="_footer_div">

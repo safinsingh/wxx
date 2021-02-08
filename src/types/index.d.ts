@@ -28,3 +28,8 @@ export type PostFragment = PostMeta & {
 export type Post = PostFragment & {
 	innerMD: string
 }
+
+export type ThemeContextTy = {
+	theme?: string
+	setTheme: (theme: string) => void
+}

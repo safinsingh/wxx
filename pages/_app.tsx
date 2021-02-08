@@ -2,16 +2,16 @@
 
 import Footer from '~/components/Footer'
 import Meta from '~/components/Meta'
-import { ThemeWrapper } from '~/state'
+import ThemeProvider from '~/components/ThemeProvider'
 import '~/styles/root.scss'
 
 const App = ({ Component, pageProps }) => {
 	return (
-		<ThemeWrapper>
+		<ThemeProvider>
 			<Meta />
 			<Component {...pageProps} />
 			<Footer />
-		</ThemeWrapper>
+		</ThemeProvider>
 	)
 }
 
