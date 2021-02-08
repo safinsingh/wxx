@@ -62,7 +62,6 @@ export const getStaticProps = async () => {
 			postData: await getPosts(),
 			projects: await getProjects()
 		},
-		// rip vercel :pray:
 		revalidate: 1
 	}
 }

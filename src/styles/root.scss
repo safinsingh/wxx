@@ -9,7 +9,10 @@ body,
 	font-family: 'Inter', sans-serif !important;
 	box-sizing: border-box;
 	text-decoration: none !important;
-	transition: all 0.15s;
+	transition: color 0.15s, background-color 0.15s, border 0.15s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 body,
