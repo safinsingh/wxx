@@ -4,7 +4,7 @@ dependencies:
   node-fetch: 2.6.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
-  react-markdown: 5.0.3_@types+react@17.0.0+react@17.0.1
+  react-markdown: 5.0.3_@types+react@17.0.2+react@17.0.1
   react-syntax-highlighter: 15.4.3_react@17.0.1
   sass: 1.32.6
 devDependencies:
@@ -12,7 +12,7 @@ devDependencies:
   '@types/node': 14.14.27
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.1
-  '@types/react': 17.0.0
+  '@types/react': 17.0.2
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.19.0
   eslint-config-canonical: 25.8.13_eslint@7.19.0+typescript@4.1.3
@@ -363,13 +363,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-U7DrUaQRv3b+fsbPXMf7vC21K7DOkdNCQtp14Wm0Z5YLI9fPhndN4YTZ9eVXwmAivIg6lZ3YBVtGYucAS3H76A==
-  /@types/react/17.0.0:
-    dependencies:
-      '@types/prop-types': 15.7.3
-      csstype: 3.0.6
-    dev: true
-    resolution:
-      integrity: sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
   /@types/react/17.0.1:
     dependencies:
       '@types/prop-types': 15.7.3
@@ -377,6 +370,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
+  /@types/react/17.0.2:
+    dependencies:
+      '@types/prop-types': 15.7.3
+      csstype: 3.0.6
+    dev: true
+    resolution:
+      integrity: sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
   /@types/unist/2.0.3:
     dev: false
     resolution:
@@ -3708,10 +3708,10 @@ packages:
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-  /react-markdown/5.0.3_@types+react@17.0.0+react@17.0.1:
+  /react-markdown/5.0.3_@types+react@17.0.2+react@17.0.1:
     dependencies:
       '@types/mdast': 3.0.3
-      '@types/react': 17.0.0
+      '@types/react': 17.0.2
       '@types/unist': 2.0.3
       html-to-react: 1.4.5_react@17.0.1
       mdast-add-list-metadata: 1.0.1
@@ -4742,7 +4742,7 @@ specifiers:
   '@types/node': 14.14.27
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.1
-  '@types/react': 17.0.0
+  '@types/react': 17.0.2
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.19.0
   eslint-config-canonical: 25.8.13
