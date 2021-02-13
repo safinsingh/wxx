@@ -67,6 +67,7 @@ module.exports = {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/triple-slash-reference': 'off',
 		'filenames/match-exported': 'off',
+		'newline-before-return': 'off',
 		'node/no-missing-import': 'off',
 		'node/no-process-env': 'off',
 		'prettier/prettier': 'error',
