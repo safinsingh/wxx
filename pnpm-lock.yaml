@@ -17,7 +17,7 @@ devDependencies:
   eslint: 7.20.0
   eslint-config-canonical: 25.8.17_eslint@7.20.0+typescript@4.1.5
   eslint-config-prettier: 7.2.0_eslint@7.20.0
-  eslint-import-resolver-typescript: 2.3.0_eslint@7.20.0
+  eslint-import-resolver-typescript: 2.4.0_eslint@7.20.0
   eslint-plugin-prettier: 3.3.1_90376326e593b529cca0740deb6f3b7f
   husky: 5.0.9
   prettier: 2.2.1
@@ -1512,7 +1512,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA==
-  /eslint-import-resolver-typescript/2.3.0_eslint@7.20.0:
+  /eslint-import-resolver-typescript/2.4.0_eslint@7.20.0:
     dependencies:
       debug: 4.3.1
       eslint: 7.20.0
@@ -1527,7 +1527,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     resolution:
-      integrity: sha512-MHSXvmj5e0SGOOBhBbt7C+fWj1bJbtSYFAD85Xeg8nvUtuooTod2HQb8bfhE9f5QyyNxEfgzqOYFCvmdDIcCuw==
+      integrity: sha512-useJKURidCcldRLCNKWemr1fFQL1SzB3G4a0li6lFGvlc5xGe1hY343bvG07cbpCzPuM/lK19FIJB3XGFSkplA==
   /eslint-module-utils/2.6.0:
     dependencies:
       debug: 2.6.9
@@ -4668,7 +4668,7 @@ specifiers:
   eslint: 7.20.0
   eslint-config-canonical: 25.8.17
   eslint-config-prettier: 7.2.0
-  eslint-import-resolver-typescript: 2.3.0
+  eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-prettier: 3.3.1
   gray-matter: 4.0.2
   husky: 5.0.9
