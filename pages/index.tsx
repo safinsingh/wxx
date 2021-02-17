@@ -39,7 +39,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 		<Section name="Projects 🔨">
 			<Grid>
 				{projects.map((projectProps) => (
-					<Card {...projectProps} key={projectProps.name} />
+					<Card key={projectProps.name} {...projectProps} />
 				))}
 			</Grid>
 		</Section>
