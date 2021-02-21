@@ -6,9 +6,7 @@ module.exports = {
 		'canonical/node',
 		'canonical/react',
 		'plugin:prettier/recommended',
-		'prettier/@typescript-eslint',
-		'prettier/react',
-		'prettier/babel'
+		'prettier'
 	],
 	overrides: [
 		{
