@@ -1,18 +1,18 @@
 export const lightTheme = `
---fg: #000;
---bg: #fff;
---bg-alpha: #ffffff80;
+--fg: #000000;
+--bg: #ffffff;
+--bg-alpha: #ffffff60;
 --accent: #32b073;
---muted: #666666;
+--muted: #545454;
 --light-gray: #d9d9d9;
 `
 
 export const darkTheme = `
---fg: #fff;
---bg: #000;
---bg-alpha: #00000080;
+--fg: #ffffff;
+--bg: #050505;
+--bg-alpha: #050505A0;
 --accent: #1fff92;
---muted: #999999;
+--muted: #a3a3a3;
 --light-gray: #262626;
 `
 
@@ -60,7 +60,7 @@ export const light = {
 		color: '#6182b8'
 	},
 	'code[class*="language-"]': {
-		color: '#90a4ae'
+		color: '#859299'
 	},
 	'code[class*="language-"] ::-moz-selection': {
 		background: '#cceae7',
@@ -120,7 +120,7 @@ export const light = {
 		color: '#39adb5'
 	},
 	'pre[class*="language-"]': {
-		color: '#90a4ae',
+		color: '#859299',
 		fontSize: '1em'
 	},
 	'pre[class*="language-"] ::-moz-selection': {

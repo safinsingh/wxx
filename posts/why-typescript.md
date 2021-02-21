@@ -60,7 +60,7 @@ TypeError: Cannot read property 'nested' of undefined
     // ... omitted (stack trace)
 ```
 
-Oh no! Our code exited prematurely in the middle of "some action"! This is because the error occurred at _runtime_, and because JavaScript is an _interpreted_ language, it exited in the middle of our script. Now, let's write the same thing in TypeScript and attempt to compile it:
+Oh no! Our code exited prematurely in the middle of "some action"! This is because the error occurred at _runtime_, so it exited in the middle of our script. Now, let's write the same thing in TypeScript and attempt to compile it:
 
 ```typescript
 const someNumber = 1
@@ -72,8 +72,11 @@ const someObject = {
 	}
 }
 
-// Added the: typeof someObject!
-function onObject(obj: typeof someObject) {
+// Notice this explicit `type` annotation? It does increase
+// code verbosity but saves you lots of time in the long run!
+type SomeObject = { a: { nested: { property: number } } }
+
+function onObject(obj: SomeObject) {
 	console.log(obj.a.nested.property)
 }
 
@@ -106,8 +109,9 @@ const someObject = {
 	}
 }
 
-// Added the: typeof someObject!
-function onObject(obj: typeof someObject) {
+type SomeObject = { a: { nested: { property: number } } }
+
+function onObject(obj: SomeObject) {
 	console.log(obj.a.nested.property)
 }
 

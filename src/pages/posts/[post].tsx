@@ -18,7 +18,7 @@ const CodeBlock: React.FC<{ language: string; value: string }> = ({
 	return (
 		<SyntaxHighlighter
 			language={language}
-			style={theme === 'light' ? light : dark}
+			style={theme === 'dark' ? dark : light}
 		>
 			{value}
 		</SyntaxHighlighter>
@@ -39,7 +39,7 @@ const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 			/>
 			<hr />
 			<Link href="/">
-				<a className="_social_link">👈 back home</a>
+				<a className="_social_link _back">👈 Back Home</a>
 			</Link>
 		</Section>
 	</Container>

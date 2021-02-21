@@ -1,6 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
-import { getProjects } from '~/api'
+import { getProjects } from '~/pages/api'
 import Card from '~/components/Card'
 import Container from '~/components/Container'
 import Grid from '~/components/Grid'
@@ -44,7 +44,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 			</Grid>
 		</Section>
 		<Section name="Posts 📜">
-			{postData.slice(0, 3).map((frag) => (
+			{postData.map((frag) => (
 				<Link href={`/posts/${frag.id}`} key={frag.id}>
 					<div className="_clickable">
 						<h2 className="_post_frag_title">{frag.title}</h2>
