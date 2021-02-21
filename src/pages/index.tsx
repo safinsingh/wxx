@@ -1,6 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
-import { getProjects } from '~/pages/api'
+import { getProjects } from '~/api'
 import Card from '~/components/Card'
 import Container from '~/components/Container'
 import Grid from '~/components/Grid'
