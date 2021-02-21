@@ -16,9 +16,9 @@ devDependencies:
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.20.0
   eslint-config-canonical: 25.9.0_eslint@7.20.0+typescript@4.1.5
-  eslint-config-prettier: 7.2.0_eslint@7.20.0
+  eslint-config-prettier: 8.0.0_eslint@7.20.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.20.0
-  eslint-plugin-prettier: 3.3.1_90376326e593b529cca0740deb6f3b7f
+  eslint-plugin-prettier: 3.3.1_426e1051eb87c5f049018903480d7fd9
   husky: 5.0.9
   prettier: 2.2.1
   typescript: 4.1.5
@@ -1434,7 +1434,7 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-lWyMdBfM1zDaUBKDLsFKywQxWfkiJdkv4y+2pCguBaWcF4t4rP1K67C8eaUWhhWXLmSCQqbc8J4DTy+arxn1MQ==
-  /eslint-config-prettier/7.2.0_eslint@7.20.0:
+  /eslint-config-prettier/8.0.0_eslint@7.20.0:
     dependencies:
       eslint: 7.20.0
     dev: true
@@ -1442,7 +1442,7 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
     resolution:
-      integrity: sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
+      integrity: sha512-5EaAVPsIHu+grmm5WKjxUia4yHgRrbkd8I0ffqUSwixCPMVBrbS97UnzlEY/Q7OWo584vgixefM0kJnUfo/VjA==
   /eslint-import-resolver-node/0.3.4:
     dependencies:
       debug: 2.6.9
@@ -1686,10 +1686,10 @@ packages:
       eslint: '>=5.16.0'
     resolution:
       integrity: sha512-oUwtPJ1W0SKD0Tr+wqu92c5xuCeQqB3hSCHasn/ZgjFdA9iDGNkNf2Zi9ztY7X+hNuMib23LNGRm6+uN+KLE3g==
-  /eslint-plugin-prettier/3.3.1_90376326e593b529cca0740deb6f3b7f:
+  /eslint-plugin-prettier/3.3.1_426e1051eb87c5f049018903480d7fd9:
     dependencies:
       eslint: 7.20.0
-      eslint-config-prettier: 7.2.0_eslint@7.20.0
+      eslint-config-prettier: 8.0.0_eslint@7.20.0
       prettier: 2.2.1
       prettier-linter-helpers: 1.0.0
     dev: true
@@ -4605,7 +4605,7 @@ specifiers:
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.20.0
   eslint-config-canonical: 25.9.0
-  eslint-config-prettier: 7.2.0
+  eslint-config-prettier: 8.0.0
   eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-prettier: 3.3.1
   gray-matter: 4.0.2
