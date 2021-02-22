@@ -1,9 +1,9 @@
 name: fmt
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   fmt:
     runs-on: ubuntu-latest
