@@ -79,6 +79,8 @@ mustTimeOut().catch(console.error)
 wontTimeOut().then(console.log)
 ```
 
-Notice how we did not add the `await` keyword when we were returning from our asynchronous functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the Promise on the call stack while it is waiting for the Promise to resolve. This results in an extra microtask (since the caller must await the promise returned by the asynchronous function itself as well).
+Notice how we did not add the `await` keyword when we were returning from our asynchronous functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the `Promise` on the call stack while it is waiting for the `Promise` to resolve. This results in an extra microtask (since the caller must `await` the `Promise` returned by the asynchronous function itself as well!).
+
+If you're interested in reading more about the `return`/`await`/`return await` variants, I suggest you read [Jake Archibald's post](https://jakearchibald.com/2017/await-vs-return-vs-return-await/) about it; he briefly explains the differences along with some example code.
 
 Note: updated on 2/22/2021.
