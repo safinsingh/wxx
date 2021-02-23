@@ -38,12 +38,12 @@ However, this snippet was specific to the scenario that the blog was describing;
 // option is set in your TSConfig in order to differentiate
 // it from a tag.
 const withTimeout = async <R extends unknown>(
-	fn: () => Promise<R>,
+	fn: () => R | PromiseLike<R>,
 	timeout: number,
 	message = 'Timeout!'
 ): Promise<R> => {
 	return await Promise.race([
-		fn(),
+		Promise.resolve(fn()),
 		new Promise((_, reject) => {
 			setTimeout(() => reject(new Error(message)), timeout)
 		}) as Promise<R>
@@ -55,7 +55,8 @@ Using this abstraction, you can conveniently encapsulate timeout-sensitive funct
 
 ```typescript
 const timeSensitiveFn = async () => {
-	// "Wait" for 4 seconds.
+	// "Wait" for 4 seconds by pausing execution until
+	// the Promise resolves.
 	await new Promise((resolve) => setTimeout(resolve, 4000))
 	return 'this will not be displayed!'
 }
@@ -74,10 +75,10 @@ const wontTimeOut = async () => {
 	)
 }
 
-mustTimeOut().then(console.log).catch(console.error)
-wontTimeOut().then(console.log).catch(console.error)
+mustTimeOut().catch(console.error)
+wontTimeOut().then(console.log)
 ```
 
-Notice how we did not add the `await` keywords to our functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the promise on the call stack, waiting for the Promise to resolve, possibly resulting in an extra microtask (since the caller must await the function itself as well).
+Notice how we did not add the `await` keyword when we were returning from our asynchronous functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the Promise on the call stack while it is waiting for the Promise to resolve. This results in an extra microtask (since the caller must await the promise returned by the asynchronous function itself as well).
 
 Note: updated on 2/22/2021.
