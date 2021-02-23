@@ -3,7 +3,7 @@
 import { darkTheme, lightTheme } from '~/styles'
 
 const script = `
-(function () {
+;(function () {
 	const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 	const rootRef = document.documentElement;
 
@@ -22,7 +22,7 @@ const script = `
 		'--initial-color-mode',
 		darkMode ? 'dark' : 'light'
 	)
-})()
+})();
 `
 
 export const ThemeScript = () => (

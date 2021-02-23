@@ -16,9 +16,9 @@ export default class extends Document {
 			<Html lang="en">
 				<Head />
 				<body>
+					<ThemeScript />
 					<Main />
 					<NextScript />
-					<ThemeScript />
 				</body>
 			</Html>
 		)
