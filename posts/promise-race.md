@@ -32,43 +32,52 @@ async function fetchPriceWithTimeout(
 However, this snippet was specific to the scenario that the blog was describing; here's a more general form (using TypeScript's generics):
 
 ```typescript
-async function withTimeout<R>(
-	fn: () => R,
+// We use R extends unknown here as a workaround
+// in order to inform the TypeScript compiler that
+// this is a generic. This is required when the `jsx`
+// option is set in your TSConfig in order to differentiate
+// it from a tag.
+const withTimeout = async <R extends unknown>(
+	fn: () => Promise<R>,
 	timeout: number,
 	message = 'Timeout!'
-): Promise<R> {
-	// return `await`s the promise returned
-	// by Promise.race(); no need to use it
-	// explicitly here
-	return Promise.race([
+): Promise<R> => {
+	return await Promise.race([
 		fn(),
 		new Promise((_, reject) => {
 			setTimeout(() => reject(new Error(message)), timeout)
-		})
-	]) as Promise<R>
+		}) as Promise<R>
+	])
 }
 ```
 
 Using this abstraction, you can conveniently encapsulate timeout-sensitive functions like so:
 
 ```typescript
-async function mustTimeOut() {
-	await withTimeout(() => {
-		return new Promise((resolve, _) => {
-			setTimeout(
-				() => resolve('will time out!'),
-				4000
-			)
-		})
-	}, 1000)
+const timeSensitiveFn = async () => {
+	// "Wait" for 4 seconds.
+	await new Promise((resolve) => setTimeout(resolve, 4000))
+	return 'this will not be displayed!'
 }
 
-async function wontTimeOut() {
-	await withTimeout(() => {
-		console.log("this won't time out!")
-	}, 2000)
+const mustTimeOut = async () => {
+	// Although the Promise returned from timeSensitiveFn
+	// will be resolved _at some point_, Promise.race()
+	// will return only the first Promise to resolve.
+	return withTimeout(timeSensitiveFn, 1000)
 }
 
-mustTimeOut().catch(console.error)
-wontTimeOut()
+const wontTimeOut = async () => {
+	return withTimeout(
+		async () => 'this will not time out!',
+		2000
+	)
+}
+
+mustTimeOut().then(console.log).catch(console.error)
+wontTimeOut().then(console.log).catch(console.error)
 ```
+
+Notice how we did not add the `await` keywords to our functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the promise on the call stack, waiting for the Promise to resolve, possibly resulting in an extra microtask (since the caller must await the function itself as well).
+
+Note: updated on 2/22/2021.

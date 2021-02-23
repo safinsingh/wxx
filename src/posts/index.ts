@@ -44,9 +44,11 @@ export const getSinglePost = async (id: string) => {
 export const getAllPosts = async () => {
 	const files = await fs.readdir(postDirectory)
 
-	return files.map((fileName) => ({
-		params: {
-			post: fileName.replace(/\.md$/, '')
-		}
-	}))
+	return files
+		.filter((file) => file.endsWith('.md'))
+		.map((fileName) => ({
+			params: {
+				post: fileName.replace(/\.md$/, '')
+			}
+		}))
 }
