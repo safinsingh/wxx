@@ -37,12 +37,14 @@ However, this snippet was specific to the scenario that the blog was describing;
 // this is a generic. This is required when the `jsx`
 // option is set in your TSConfig in order to differentiate
 // it from a tag.
+
+// (...) => Promise<R>
 const withTimeout = async <R extends unknown>(
 	fn: () => R | PromiseLike<R>,
 	timeout: number,
 	message = 'Timeout!'
-): Promise<R> => {
-	return await Promise.race([
+) => {
+	return Promise.race([
 		Promise.resolve(fn()),
 		new Promise((_, reject) => {
 			setTimeout(() => reject(new Error(message)), timeout)
