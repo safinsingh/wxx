@@ -46,9 +46,9 @@ const withTimeout = async <R extends unknown>(
 ) => {
 	return Promise.race([
 		Promise.resolve(fn()),
-		new Promise((_, reject) => {
+		new Promise<R>((_, reject) => {
 			setTimeout(() => reject(new Error(message)), timeout)
-		}) as Promise<R>
+		})
 	])
 }
 ```
