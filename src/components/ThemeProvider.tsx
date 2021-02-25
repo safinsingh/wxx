@@ -21,8 +21,7 @@ const ThemeProvider: React.FC = ({ children }) => {
 		const css = newTheme === 'dark' ? darkTheme : lightTheme
 		const rootRef = window.document.documentElement
 
-		css
-			.trim()
+		css.trim()
 			.split('\n')
 			.map((line) => line.split(': '))
 			.forEach((property) => {

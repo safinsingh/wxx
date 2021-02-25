@@ -23,14 +23,15 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 				developer, and cybersecurity competitor.
 			</p>
 			<p>
-				I’ve developed production-ready applications in accordance with industry
-				standards using popular web frameworks such as React. In my free time, I
-				enjoy making side projects with TypeScript &amp; Rust and playing the
-				cello.
+				I’ve developed production-ready applications in accordance with
+				industry standards using popular web frameworks such as React. In my
+				free time, I enjoy making side projects with TypeScript &amp; Rust
+				and playing the cello.
 			</p>
 			<p>
-				I’m currently not looking for internships at the moment, but I will be
-				in the summer of <b>2021</b>. In the meantime, feel free to shoot me an{' '}
+				I’m currently not looking for internships at the moment, but I will
+				be in the summer of <b>2021</b>. In the meantime, feel free to shoot
+				me an{' '}
 				<a className="_email" href="mailto:safin.singh@gmail.com">
 					email!
 				</a>
