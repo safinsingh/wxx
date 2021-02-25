@@ -11,7 +11,7 @@ export const darkTheme = `
 --fg: #e2e8f0;
 --bg: #08090d;
 --bg-alpha: #08090dE0;
---accent: #1fff92;
+--accent: #71d1cf;
 --muted: #adb6c2;
 --light-gray: #262c36;
 `
