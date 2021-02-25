@@ -25,4 +25,4 @@ d()
 // ^ references `a` when calling `d`
 ```
 
-You see it in React classful components because when you call a function, `this` is set to the `this` of the caller, so when you want to, for example, call `this.setState` in `render` for example, it will attempt to call `render.setState`. That's why, before you do anything, in your constructor, you must bind the method to the this of the class itself.
+You see it in React classful components because when you call a function, `this` is set to the `this` of the caller, so when you want to, for example, call `this.handleSubmit` in `render` for example (and alter the state of the class), it will attempt to execute `render.setState(...)`. Instead, you can bind `handleSubmit` in the class constructor to ensure that it has access to the class' methods.
