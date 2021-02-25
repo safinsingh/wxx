@@ -85,7 +85,7 @@ const Meta = () => (
 		{/* External Dependencies */}
 		<link href="https://fonts.gstatic.com" rel="preconnect" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Inter:wght@400;600&family=JetBrains+Mono&display=swap"
 			rel="stylesheet"
 		/>
 		<link

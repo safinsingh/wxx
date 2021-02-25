@@ -1,19 +1,19 @@
 export const lightTheme = `
---fg: #000000;
+--fg: #1a202c;
 --bg: #ffffff;
 --bg-alpha: #ffffff60;
---accent: #32b073;
---muted: #545454;
---light-gray: #d9d9d9;
+--accent: #319795;
+--muted: #4a5568;
+--light-gray: #ccd3e1;
 `
 
 export const darkTheme = `
---fg: #ffffff;
---bg: #050505;
---bg-alpha: #050505A0;
+--fg: #e2e8f0;
+--bg: #08090d;
+--bg-alpha: #08090dE0;
 --accent: #1fff92;
---muted: #a3a3a3;
---light-gray: #262626;
+--muted: #adb6c2;
+--light-gray: #262c36;
 `
 
 export const light = {
