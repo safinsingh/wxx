@@ -30,9 +30,8 @@ export const query = `
 
 export const reverseColorMode = (mode: string) =>
 	mode === 'light' ? 'dark' : 'light'
-export const toSentenceCase = (mode: string) => {
-	return mode.charAt(0).toUpperCase() + mode.slice(1)
-}
+export const modeAsEmoji = (mode: string) =>
+	mode === 'light' ? '🌙 Dark' : '☀️ Light'
 
 export const defaultProjects = () => {
 	return new Array(6).fill({

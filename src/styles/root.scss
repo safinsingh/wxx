@@ -33,7 +33,7 @@ div._footer_div {
 @supports (backdrop-filter: none) {
 	div._footer_div {
 		background-color: var(--bg-alpha);
-		backdrop-filter: saturate(200%) blur(20px);
+		backdrop-filter: saturate(200%) blur(15px);
 	}
 }
 

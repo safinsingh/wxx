@@ -10,7 +10,7 @@ export const lightTheme = `
 export const darkTheme = `
 --fg: #e2e8f0;
 --bg: #08090d;
---bg-alpha: #08090dE0;
+--bg-alpha: #08090dC0;
 --accent: #71d1cf;
 --muted: #adb6c2;
 --light-gray: #262c36;

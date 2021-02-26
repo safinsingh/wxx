@@ -23,10 +23,9 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 				developer, and cybersecurity competitor.
 			</p>
 			<p>
-				I’ve developed production-ready applications in accordance with
-				industry standards using popular web frameworks such as React. In my
-				free time, I enjoy making side projects with TypeScript &amp; Rust
-				and playing the cello.
+				I develop production-ready applications with React and Node.js. In
+				my free time, I enjoy making side projects, learning Rust, and
+				playing the cello.
 			</p>
 			<p>
 				I’m currently not looking for internships at the moment, but I will

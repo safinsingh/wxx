@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { ThemeContext } from './ThemeProvider'
-import { reverseColorMode, toSentenceCase } from '~/data'
+import { reverseColorMode, modeAsEmoji } from '~/data'
 
 const Footer = () => {
 	const { theme, setTheme } = useContext(ThemeContext)
@@ -8,14 +8,14 @@ const Footer = () => {
 	return (
 		<div className="_footer_div">
 			<p className="_footer_p">
-				Safin Singh © 2021 | Built with Next &amp; 💚 |{' '}
+				Safin Singh © 2021 |{' '}
 				<span
 					className="_footer_color_switch"
 					onClick={() => {
 						setTheme(reverseColorMode(theme))
 					}}
 				>
-					{toSentenceCase(reverseColorMode(theme))} Mode
+					{modeAsEmoji(theme)}
 				</span>
 			</p>
 		</div>
