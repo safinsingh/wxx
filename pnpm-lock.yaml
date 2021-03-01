@@ -1,6 +1,6 @@
 dependencies:
   gray-matter: 4.0.2
-  next: 10.0.8-canary.10_6d716a5e41745fbe012e0c2e1c141ad8
+  next: 10.0.8-canary.11_6d716a5e41745fbe012e0c2e1c141ad8
   node-fetch: 2.6.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -177,15 +177,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
-  /@next/env/10.0.8-canary.10:
+  /@next/env/10.0.8-canary.11:
     dev: false
     resolution:
-      integrity: sha512-xePO9w85dWdG9qgv48G7n3rsGhKYCWuuC/E0sKMFeQl8wlc79DcTF+tnQEoOC+a3g9oARYmw+N8RC9D3Y2K4Gw==
-  /@next/polyfill-module/10.0.8-canary.10:
+      integrity: sha512-2e9ELa7raLtIW7W+Dj2zx0BAgMTRVuxD/y/orlF7P4+vTe+dztj+ya5o5T6NoRcmKKt416dd0Z/ucwIQrnKejw==
+  /@next/polyfill-module/10.0.8-canary.11:
     dev: false
     resolution:
-      integrity: sha512-tahrhLV4cR2A6fhi1R3BWImKTsy+qXdxFrbHUkzeProHdzipU28wPAyg6k+WnYD6rGUoaU8FpBIm+6Cxyt6j+A==
-  /@next/react-dev-overlay/10.0.8-canary.10_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-IfQCZgN1zvu8e1NyXNe5IxRMDa/VjPJXY4N6v7XKbNBtIRndGkGV6tmVuEk/FBtYUvCD7PO6A+5vcVAhUdn6yA==
+  /@next/react-dev-overlay/10.0.8-canary.11_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/code-frame': 7.12.11
       anser: 1.4.9
@@ -205,8 +205,8 @@ packages:
       react: ^16.9.0 || ^17
       react-dom: ^16.9.0 || ^17
     resolution:
-      integrity: sha512-zfog8NH5DE0Gg4DYa8TaKLYdtwHLC3+KACfW3sKggYuyBIUJu+ByvLgWopLkaprCloeKPEUUTQcVS8UyNzmmSw==
-  /@next/react-refresh-utils/10.0.8-canary.10_react-refresh@0.8.3:
+      integrity: sha512-Sly3Oh1scUi1nSbZYRtcQFonl+POPR1rxmnMtpZ9lVXd1Vvt45UKpY1CjQxOC/tMk6yIYOjVfGqFVEPleBxm4A==
+  /@next/react-refresh-utils/10.0.8-canary.11_react-refresh@0.8.3:
     dependencies:
       react-refresh: 0.8.3
     dev: false
@@ -217,7 +217,7 @@ packages:
       webpack:
         optional: true
     resolution:
-      integrity: sha512-v8586NDWm/HmDLHao281tdVFEPPTOOCKAVism6yHJ27MZ9txzsUKyT61xM7He8Pi+qM4MvFO7a/yNyN49B9Ebw==
+      integrity: sha512-WUm/4XadHQmHA4oygba67fYF41gy8PB1nJukKIOJ3tprf0dT5jM2OYwfPIjty6s8f8L90MwJ0C+Eos9AFcF5dg==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -2753,14 +2753,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
-  /next/10.0.8-canary.10_6d716a5e41745fbe012e0c2e1c141ad8:
+  /next/10.0.8-canary.11_6d716a5e41745fbe012e0c2e1c141ad8:
     dependencies:
       '@babel/runtime': 7.12.5
       '@hapi/accept': 5.0.1
-      '@next/env': 10.0.8-canary.10
-      '@next/polyfill-module': 10.0.8-canary.10
-      '@next/react-dev-overlay': 10.0.8-canary.10_react-dom@17.0.1+react@17.0.1
-      '@next/react-refresh-utils': 10.0.8-canary.10_react-refresh@0.8.3
+      '@next/env': 10.0.8-canary.11
+      '@next/polyfill-module': 10.0.8-canary.11
+      '@next/react-dev-overlay': 10.0.8-canary.11_react-dom@17.0.1+react@17.0.1
+      '@next/react-refresh-utils': 10.0.8-canary.11_react-refresh@0.8.3
       '@opentelemetry/api': 0.14.0
       ast-types: 0.13.2
       browserslist: 4.16.1
@@ -2814,7 +2814,7 @@ packages:
       sass:
         optional: true
     resolution:
-      integrity: sha512-0gINF6apPVmv1PCOViwJJ6NOBT+++2wx7yGzCRToNrAy2TZ3nwphldHcIBbi4RfLgBho6bopRdEhTzg/8tERiA==
+      integrity: sha512-vswoL5sAUgqdi+Sjd3Ye66Q4jL/6gA3qk+E/g7FM0TUnmXvA6c4KQOvN27xqEr/vW60DSkI1c787kHzrwKYDRQ==
   /node-fetch/2.6.1:
     dev: false
     engines:
@@ -4243,7 +4243,7 @@ specifiers:
   eslint-plugin-prettier: 3.3.1
   gray-matter: 4.0.2
   husky: 5.1.2
-  next: 10.0.8-canary.10
+  next: 10.0.8-canary.11
   node-fetch: 2.6.1
   prettier: 2.2.1
   react: 17.0.1
