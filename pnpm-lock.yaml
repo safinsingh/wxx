@@ -4,7 +4,7 @@ dependencies:
   node-fetch: 2.6.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
-  react-markdown: 5.0.3_@types+react@17.0.2+react@17.0.1
+  react-markdown: 5.0.3_@types+react@17.0.3+react@17.0.1
   react-syntax-highlighter: 15.4.3_react@17.0.1
   sass: 1.32.8
 devDependencies:
@@ -12,7 +12,7 @@ devDependencies:
   '@types/node': 14.14.32
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.2
-  '@types/react': 17.0.2
+  '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.21.0
   eslint-config-canonical: 25.9.0_eslint@7.21.0+typescript@4.2.3
@@ -327,13 +327,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
-  /@types/react/17.0.2:
+  /@types/react/17.0.3:
     dependencies:
       '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
       csstype: 3.0.6
     dev: true
     resolution:
-      integrity: sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
+      integrity: sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==
+  /@types/scheduler/0.16.1:
+    dev: true
+    resolution:
+      integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
   /@types/unist/2.0.3:
     dev: false
     resolution:
@@ -3336,10 +3341,10 @@ packages:
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-  /react-markdown/5.0.3_@types+react@17.0.2+react@17.0.1:
+  /react-markdown/5.0.3_@types+react@17.0.3+react@17.0.1:
     dependencies:
       '@types/mdast': 3.0.3
-      '@types/react': 17.0.2
+      '@types/react': 17.0.3
       '@types/unist': 2.0.3
       html-to-react: 1.4.5_react@17.0.1
       mdast-add-list-metadata: 1.0.1
@@ -4234,7 +4239,7 @@ specifiers:
   '@types/node': 14.14.32
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.2
-  '@types/react': 17.0.2
+  '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.21.0
   eslint-config-canonical: 25.9.0
