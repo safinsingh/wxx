@@ -9,7 +9,7 @@ dependencies:
   sass: 1.32.8
 devDependencies:
   '@types/eslint': 7.2.7
-  '@types/node': 14.14.34
+  '@types/node': 14.14.35
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.2
   '@types/react': 17.0.3
@@ -298,10 +298,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
-  /@types/node/14.14.34:
+  /@types/node/14.14.35:
     dev: true
     resolution:
-      integrity: sha512-dBPaxocOK6UVyvhbnpFIj2W+S+1cBTkHQbFQfeeJhoKFbzYcVUGHvddeWPSucKATb3F0+pgDq0i6ghEaZjsugA==
+      integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -4250,7 +4250,7 @@ packages:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
   '@types/eslint': 7.2.7
-  '@types/node': 14.14.34
+  '@types/node': 14.14.35
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.2
   '@types/react': 17.0.3
