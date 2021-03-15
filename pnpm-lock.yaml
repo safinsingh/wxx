@@ -11,7 +11,7 @@ devDependencies:
   '@types/eslint': 7.2.7
   '@types/node': 14.14.35
   '@types/node-fetch': 2.5.8
-  '@types/prettier': 2.2.2
+  '@types/prettier': 2.2.3
   '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.22.0
@@ -306,10 +306,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
-  /@types/prettier/2.2.2:
+  /@types/prettier/2.2.3:
     dev: true
     resolution:
-      integrity: sha512-i99hy7Ki19EqVOl77WplDrvgNugHnsSjECVR/wUrzw2TJXz1zlUfT2ngGckR6xN7yFYaijsMAqPkOLx9HgUqHg==
+      integrity: sha512-PijRCG/K3s3w1We6ynUKdxEc5AcuuH3NBmMDP8uvKVp6X43UY7NQlTzczakXP3DJR0F4dfNQIGjU2cUeRYs2AA==
   /@types/prop-types/15.7.3:
     dev: true
     resolution:
@@ -4252,7 +4252,7 @@ specifiers:
   '@types/eslint': 7.2.7
   '@types/node': 14.14.35
   '@types/node-fetch': 2.5.8
-  '@types/prettier': 2.2.2
+  '@types/prettier': 2.2.3
   '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.22.0
