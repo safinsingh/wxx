@@ -15,7 +15,7 @@ devDependencies:
   '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.22.0
-  eslint-config-canonical: 25.9.0_eslint@7.22.0+typescript@4.2.3
+  eslint-config-canonical: 25.9.1_eslint@7.22.0+typescript@4.2.3
   eslint-config-prettier: 8.1.0_eslint@7.22.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.22.0
   eslint-plugin-prettier: 3.3.1_44b94358ac15c7c093df3d5421ccc811
@@ -124,14 +124,14 @@ packages:
       '@babel/types': 7.12.13
       debug: 4.3.1
       globals: 11.12.0
-      lodash: 4.17.20
+      lodash: 4.17.21
     dev: true
     resolution:
       integrity: sha512-3Zb4w7eE/OslI0fTp8c7b286/cQps3+vdLW3UcwC8VSJC6GbKn55aeVVu2QJNuCDoeKyptLOFrPq8WqZZBodyA==
   /@babel/types/7.12.13:
     dependencies:
       '@babel/helper-validator-identifier': 7.12.11
-      lodash: 4.17.20
+      lodash: 4.17.21
       to-fast-properties: 2.0.0
     dev: true
     resolution:
@@ -351,7 +351,7 @@ packages:
       debug: 4.3.1
       eslint: 7.22.0
       functional-red-black-tree: 1.0.1
-      lodash: 4.17.20
+      lodash: 4.17.21
       regexpp: 3.1.0
       semver: 7.3.4
       tsutils: 3.20.0_typescript@4.2.3
@@ -1215,7 +1215,7 @@ packages:
       integrity: sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
   /enhance-visitors/1.0.0:
     dependencies:
-      lodash: 4.17.20
+      lodash: 4.17.21
     dev: true
     engines:
       node: '>=4.0.0'
@@ -1290,7 +1290,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-otzzTim2/1+lVrlH19EfQQJEhVJSu0zOb9ygb3iapN6UlyaDtyRq4b5U1FuW0v1lRa9Fp/GJyHkSwm6NqABgCA==
-  /eslint-config-canonical/25.9.0_eslint@7.22.0+typescript@4.2.3:
+  /eslint-config-canonical/25.9.1_eslint@7.22.0+typescript@4.2.3:
     dependencies:
       '@babel/eslint-parser': 7.12.16_eslint@7.22.0
       '@typescript-eslint/eslint-plugin': 4.15.0_45bfd592318dfaf055134f1a9c911401
@@ -1324,7 +1324,7 @@ packages:
       eslint: ^6.0.0 || ^7.0.0
       typescript: '*'
     resolution:
-      integrity: sha512-lWyMdBfM1zDaUBKDLsFKywQxWfkiJdkv4y+2pCguBaWcF4t4rP1K67C8eaUWhhWXLmSCQqbc8J4DTy+arxn1MQ==
+      integrity: sha512-fMoe/hCMwtfSjEtBN+xxlIUuiI6k2iLRB1whsXIp2/B5ol3pVZtL+oY3QKYK71I4wDOmD+eBBphwo9U4Mvzg2A==
   /eslint-config-prettier/8.1.0_eslint@7.22.0:
     dependencies:
       eslint: 7.22.0
@@ -1444,7 +1444,7 @@ packages:
   /eslint-plugin-flowtype/5.2.0_eslint@7.22.0:
     dependencies:
       eslint: 7.22.0
-      lodash: 4.17.20
+      lodash: 4.17.21
       string-natural-compare: 3.0.1
     dev: true
     engines:
@@ -1458,7 +1458,7 @@ packages:
       create-eslint-index: 1.0.0
       eslint: 7.22.0
       eslint-ast-utils: 1.1.0
-      lodash: 4.17.20
+      lodash: 4.17.21
       req-all: 0.1.0
     dev: true
     engines:
@@ -1508,7 +1508,7 @@ packages:
       debug: 4.3.1
       eslint: 7.22.0
       jsdoctypeparser: 9.0.0
-      lodash: 4.17.20
+      lodash: 4.17.21
       regextras: 0.7.1
       semver: 7.3.4
       spdx-expression-parse: 3.0.1
@@ -1648,7 +1648,7 @@ packages:
       eslint-template-visitor: 2.2.2_eslint@7.22.0
       eslint-utils: 2.1.0
       import-modules: 2.1.0
-      lodash: 4.17.20
+      lodash: 4.17.21
       pluralize: 8.0.0
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.23
@@ -2063,12 +2063,7 @@ packages:
     optional: true
     resolution:
       integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
-  /graceful-fs/4.2.4:
-    dev: true
-    resolution:
-      integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
   /graceful-fs/4.2.6:
-    dev: false
     resolution:
       integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
   /gray-matter/4.0.2:
@@ -2538,7 +2533,7 @@ packages:
       integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
   /load-json-file/2.0.0:
     dependencies:
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       parse-json: 2.2.0
       pify: 2.3.0
       strip-bom: 3.0.0
@@ -2600,10 +2595,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
-  /lodash/4.17.20:
-    dev: true
-    resolution:
-      integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
   /lodash/4.17.21:
     resolution:
       integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -4256,7 +4247,7 @@ specifiers:
   '@types/react': 17.0.3
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.22.0
-  eslint-config-canonical: 25.9.0
+  eslint-config-canonical: 25.9.1
   eslint-config-prettier: 8.1.0
   eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-prettier: 3.3.1
