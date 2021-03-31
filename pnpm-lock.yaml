@@ -8,7 +8,7 @@ dependencies:
   react-syntax-highlighter: 15.4.3_react@17.0.2
   sass: 1.32.8
 devDependencies:
-  '@types/eslint': 7.2.7
+  '@types/eslint': 7.2.8
   '@types/node': 14.14.37
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.3
@@ -264,13 +264,13 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
-  /@types/eslint/7.2.7:
+  /@types/eslint/7.2.8:
     dependencies:
       '@types/estree': 0.0.46
       '@types/json-schema': 7.0.7
     dev: true
     resolution:
-      integrity: sha512-EHXbc1z2GoQRqHaAT7+grxlTJ3WE2YNeD6jlpPoRc83cCoThRY+NUWjCUZaYmk51OICkPXn2hhphcWcWXgNW0Q==
+      integrity: sha512-RTKvBsfz0T8CKOGZMfuluDNyMFHnu5lvNr4hWEsQeHXH6FcmIDIozOyWMh36nLGMwVd5UFNXC2xztA8lln22MQ==
   /@types/estree/0.0.46:
     dev: true
     resolution:
@@ -4382,7 +4382,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
-  '@types/eslint': 7.2.7
+  '@types/eslint': 7.2.8
   '@types/node': 14.14.37
   '@types/node-fetch': 2.5.8
   '@types/prettier': 2.2.3
