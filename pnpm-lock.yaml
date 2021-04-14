@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/eslint': 7.2.9
+  '@types/eslint': 7.2.10
   '@types/node': 14.14.37
   '@types/node-fetch': 2.5.10
   '@types/prettier': 2.2.3
@@ -35,7 +35,7 @@ dependencies:
   sass: 1.32.8
 
 devDependencies:
-  '@types/eslint': 7.2.9
+  '@types/eslint': 7.2.10
   '@types/node': 14.14.37
   '@types/node-fetch': 2.5.10
   '@types/prettier': 2.2.3
@@ -288,8 +288,8 @@ packages:
     engines: {node: '>=8.0.0'}
     dev: false
 
-  /@types/eslint/7.2.9:
-    resolution: {integrity: sha512-SdAAXZNvWfhtf3X3y1cbbCZhP3xyPh7mfTvzV6CgfWc/ZhiHpyr9bVroe2/RCHIf7gczaNcprhaBLsx0CCJHQA==}
+  /@types/eslint/7.2.10:
+    resolution: {integrity: sha512-kUEPnMKrqbtpCq/KTaGFFKAcz6Ethm2EjCoKIDaCmfRBWLbFuTcOJfTlorwbnboXBzahqWLgUp1BQeKHiJzPUQ==}
     dependencies:
       '@types/estree': 0.0.46
       '@types/json-schema': 7.0.7
