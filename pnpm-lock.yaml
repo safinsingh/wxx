@@ -11,7 +11,7 @@ specifiers:
   eslint-config-canonical: 25.9.1
   eslint-config-prettier: 8.2.0
   eslint-import-resolver-typescript: 2.4.0
-  eslint-plugin-prettier: 3.3.1
+  eslint-plugin-prettier: 3.4.0
   gray-matter: 4.0.2
   husky: 5.2.0
   next: 10.1.3
@@ -45,7 +45,7 @@ devDependencies:
   eslint-config-canonical: 25.9.1_eslint@7.24.0+typescript@4.2.4
   eslint-config-prettier: 8.2.0_eslint@7.24.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.24.0
-  eslint-plugin-prettier: 3.3.1_64fa1aa96df95a5df14fce32631d8e89
+  eslint-plugin-prettier: 3.4.0_64fa1aa96df95a5df14fce32631d8e89
   husky: 5.2.0
   prettier: 2.2.1
   typescript: 4.2.4
@@ -1582,8 +1582,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/3.3.1_64fa1aa96df95a5df14fce32631d8e89:
-    resolution: {integrity: sha512-Rq3jkcFY8RYeQLgk2cCwuc0P7SEFwDravPhsJZOQ5N4YI4DSg50NyqJ/9gdZHzQlHf8MvafSesbNJCcP/FF6pQ==}
+  /eslint-plugin-prettier/3.4.0_64fa1aa96df95a5df14fce32631d8e89:
+    resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
       eslint: '>=5.0.0'
