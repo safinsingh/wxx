@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/eslint': 7.2.10
-  '@types/node': 14.14.39
+  '@types/node': 14.14.40
   '@types/node-fetch': 2.5.10
   '@types/prettier': 2.2.3
   '@types/react': 17.0.3
@@ -36,7 +36,7 @@ dependencies:
 
 devDependencies:
   '@types/eslint': 7.2.10
-  '@types/node': 14.14.39
+  '@types/node': 14.14.40
   '@types/node-fetch': 2.5.10
   '@types/prettier': 2.2.3
   '@types/react': 17.0.3
@@ -329,8 +329,8 @@ packages:
   /@types/node/14.14.37:
     resolution: {integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==}
 
-  /@types/node/14.14.39:
-    resolution: {integrity: sha512-Qipn7rfTxGEDqZiezH+wxqWYR8vcXq5LRpZrETD19Gs4o8LbklbmqotSUsMU+s5G3PJwMRDfNEYoxrcBwIxOuw==}
+  /@types/node/14.14.40:
+    resolution: {integrity: sha512-2HoZZGylcnz19ZSbvWhgWHqvprw1ZGHanxIrDWYykPD4CauLW4gcyLzCVfUN2kv/1t1F3CurQIdi+s1l9+XgEA==}
     dev: true
 
   /@types/normalize-package-data/2.4.0:
