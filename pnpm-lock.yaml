@@ -9,7 +9,7 @@ specifiers:
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.25.0
   eslint-config-canonical: 25.9.1
-  eslint-config-prettier: 8.2.0
+  eslint-config-prettier: 8.3.0
   eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-prettier: 3.4.0
   gray-matter: 4.0.3
@@ -43,9 +43,9 @@ devDependencies:
   '@types/react-syntax-highlighter': 13.5.0
   eslint: 7.25.0
   eslint-config-canonical: 25.9.1_eslint@7.25.0+typescript@4.2.4
-  eslint-config-prettier: 8.2.0_eslint@7.25.0
+  eslint-config-prettier: 8.3.0_eslint@7.25.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.25.0
-  eslint-plugin-prettier: 3.4.0_aeb401621209c962417d17b18d4c87c0
+  eslint-plugin-prettier: 3.4.0_ed07edc0d33fb90bb2bebf56b9b5e0f9
   husky: 5.2.0
   prettier: 2.2.1
   typescript: 4.2.4
@@ -1340,8 +1340,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-config-prettier/8.2.0_eslint@7.25.0:
-    resolution: {integrity: sha512-dWV9EVeSo2qodOPi1iBYU/x6F6diHv8uujxbxr77xExs3zTAlNXvVZKiyLsQGNz7yPV2K49JY5WjPzNIuDc2Bw==}
+  /eslint-config-prettier/8.3.0_eslint@7.25.0:
+    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1582,7 +1582,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/3.4.0_aeb401621209c962417d17b18d4c87c0:
+  /eslint-plugin-prettier/3.4.0_ed07edc0d33fb90bb2bebf56b9b5e0f9:
     resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -1594,7 +1594,7 @@ packages:
         optional: true
     dependencies:
       eslint: 7.25.0
-      eslint-config-prettier: 8.2.0_eslint@7.25.0
+      eslint-config-prettier: 8.3.0_eslint@7.25.0
       prettier: 2.2.1
       prettier-linter-helpers: 1.0.0
     dev: true
