@@ -13,7 +13,7 @@
 		"postinstall": "husky install"
 	},
 	"dependencies": {
-		"gray-matter": "4.0.2",
+		"gray-matter": "4.0.3",
 		"next": "10.1.3",
 		"node-fetch": "2.6.1",
 		"react": "17.0.2",
