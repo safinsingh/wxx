@@ -31,7 +31,7 @@
 		"@types/react-syntax-highlighter": "13.5.0",
 		"eslint": "7.25.0",
 		"eslint-config-canonical": "25.9.1",
-		"eslint-config-prettier": "8.2.0",
+		"eslint-config-prettier": "8.3.0",
 		"eslint-import-resolver-typescript": "2.4.0",
 		"eslint-plugin-prettier": "3.4.0",
 		"husky": "5.2.0",
