@@ -19,7 +19,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 		</Section>
 		<Section name="About ✨">
 			<p>
-				Hey! I’m Safin Singh, a self-taught high-school student, full-stack
+				Hey! I’m Safin Singh, a high-school student, full-stack
 				developer, and cybersecurity competitor.
 			</p>
 			<p>
