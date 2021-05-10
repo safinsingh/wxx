@@ -6,11 +6,11 @@ const Links = ({ links }: { links: string[][] }) => (
 					<a className="_social_link" href={value}>
 						~{key}
 					</a>
-					{index !== links.length - 1 && ' · '}
+					{index !== links.length - 1 && " · "}
 				</span>
-			)
+			);
 		})}
 	</div>
-)
+);
 
-export default Links
+export default Links;

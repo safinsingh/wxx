@@ -1,6 +1,6 @@
 ---
-title: '(Initial) thoughts on the Rust Async Book'
-date: '2021-03-02'
+title: "(Initial) thoughts on the Rust Async Book"
+date: "2021-03-02"
 ---
 
 The Rust [Async Book](https://rust-lang.github.io/async-book/) was definitely a lot more to take in than the original book. There was definitely a lot less hand-holding and topics were introduced at a faster pace. Consequently, I had to read it twice before I even understood what was going on. Here are my inital thoughts on the topics it covered:

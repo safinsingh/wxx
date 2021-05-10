@@ -1,82 +1,85 @@
-/** @type {import('@types/eslint').Linter.Config} */
+// @ts-check
+
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
 	extends: [
-		'canonical',
-		'canonical/typescript',
-		'canonical/node',
-		'canonical/react',
-		'plugin:prettier/recommended',
-		'prettier'
+		"canonical",
+		"canonical/typescript",
+		"canonical/node",
+		"canonical/react",
+		"plugin:prettier/recommended",
+		"prettier"
 	],
 	overrides: [
 		{
-			files: ['*.js'],
+			files: ["*.js"],
 			rules: {
-				'@typescript-eslint/no-require-imports': 'off',
-				'@typescript-eslint/no-var-requires': 'off',
-				'import/no-commonjs': 'off',
-				'import/unambiguous': 'off'
+				"@typescript-eslint/no-require-imports": "off",
+				"@typescript-eslint/no-var-requires": "off",
+				"import/no-commonjs": "off",
+				"import/unambiguous": "off"
 			}
 		},
 		{
-			files: ['*.d.ts'],
+			files: ["*.d.ts"],
 			rules: {
-				'import/unambiguous': 'off',
-				'spaced-comment': 'off',
-				'unicorn/prevent-abbreviations': 'off'
+				"import/unambiguous": "off",
+				"spaced-comment": "off",
+				"unicorn/prevent-abbreviations": "off"
 			}
 		},
 		{
-			files: ['_document.tsx'],
+			files: ["_document.tsx"],
 			rules: {
-				'fp/no-class': 'off'
+				"fp/no-class": "off"
 			}
 		},
 		{
 			files: [
-				'_*\\.tsx',
-				'\\.*\\.js',
-				'*\\.d\\.ts',
-				'*\\.config\\.js',
-				'\\[post\\]\\.tsx'
+				"_*\\.tsx",
+				"\\.*\\.js",
+				"*\\.d\\.ts",
+				"*\\.config\\.js",
+				"\\[post\\]\\.tsx"
 			],
 			rules: {
-				'filenames/match-regex': 'off'
+				"filenames/match-regex": "off"
 			}
 		},
 		{
-			files: ['src/api/*.ts'],
+			files: ["src/api/*.ts"],
 			rules: {
-				'unicorn/prevent-abbreviations': 'off'
+				"unicorn/prevent-abbreviations": "off"
 			}
 		},
 		{
-			files: ['*.tsx'],
+			files: ["*.tsx"],
 			rules: {
-				'react/forbid-component-props': 'off'
+				"react/forbid-component-props": "off"
 			}
 		}
 	],
 	parserOptions: {
-		project: './tsconfig.eslint.json'
+		project: "./tsconfig.eslint.json"
 	},
 	root: true,
 	rules: {
-		'@typescript-eslint/explicit-module-boundary-types': 'off',
-		'@typescript-eslint/triple-slash-reference': 'off',
-		'filenames/match-exported': 'off',
-		'newline-before-return': 'off',
-		'node/no-missing-import': 'off',
-		'node/no-process-env': 'off',
-		'prettier/prettier': 'error',
-		'react/prop-types': 'off'
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/triple-slash-reference": "off",
+		"filenames/match-exported": "off",
+		"newline-before-return": "off",
+		"node/no-missing-import": "off",
+		"node/no-process-env": "off",
+		"prettier/prettier": "error",
+		"react/prop-types": "off"
 	},
 	settings: {
-		'import/resolver': {
+		"import/resolver": {
 			typescript: {}
 		},
 		react: {
-			version: 'detect'
+			version: "detect"
 		}
 	}
-}
+};

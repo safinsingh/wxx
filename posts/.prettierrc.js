@@ -1,9 +1,9 @@
 /** @type {import('@types/prettier').Options} */
 module.exports = {
-	singleQuote: true,
+	singleQuote: false,
 	trailingComma: 'none',
 	printWidth: 60,
-	semi: false,
+	semi: true,
 	useTabs: true,
 	proseWrap: 'never',
 	endOfLine: 'lf'

@@ -1,15 +1,15 @@
 const Section: React.FC<{
-	name: string
-	alternateClassName?: string
+	name: string;
+	alternateClassName?: string;
 }> = ({ name, children, alternateClassName }) => (
 	<div
 		className={`_section _section_${
-			alternateClassName ?? name.split(' ')[0].toLowerCase()
+			alternateClassName ?? name.split(" ")[0].toLowerCase()
 		}`}
 	>
 		<h1>{name}</h1>
 		{children}
 	</div>
-)
+);
 
-export default Section
+export default Section;

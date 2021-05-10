@@ -1,6 +1,6 @@
 ---
-title: 'Thoughts on the Rust Book'
-date: '2021-02-27'
+title: "Thoughts on the Rust Book"
+date: "2021-02-27"
 ---
 
 I've just finished reading the [Rust Book](https://doc.rust-lang.org/book/title-page.html). Here are some of the things I felt I should probably write down for future use:

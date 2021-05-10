@@ -1,6 +1,6 @@
 ---
-title: 'Using racing promises as a timeout'
-date: '2021-02-04'
+title: "Using racing promises as a timeout"
+date: "2021-02-04"
 ---
 
 Here's a cool little snippet I came across on [LogRocket's Blog](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/) the other day:
@@ -10,8 +10,8 @@ Here's a cool little snippet I came across on [LogRocket's Blog](https://blog.lo
 // milliseconds to use as a 'timeout'
 function timeout(ms: number): Promise<never> {
 	return new Promise((_, reject) => {
-		setTimeout(() => reject(new Error('Timeout!')), ms)
-	})
+		setTimeout(() => reject(new Error("Timeout!")), ms);
+	});
 }
 
 async function fetchPriceWithTimeout(
@@ -24,8 +24,8 @@ async function fetchPriceWithTimeout(
 	const stock = await Promise.race([
 		fetchStock(tickerSymbol),
 		timeout(3000)
-	])
-	return stock.price
+	]);
+	return stock.price;
 }
 ```
 
@@ -42,15 +42,15 @@ However, this snippet was specific to the scenario that the blog was describing;
 const withTimeout = async <R extends unknown>(
 	fn: () => R | PromiseLike<R>,
 	timeout: number,
-	message = 'Timeout!'
+	message = "Timeout!"
 ) => {
 	return Promise.race([
 		Promise.resolve(fn()),
 		new Promise<never>((_, reject) => {
-			setTimeout(() => reject(new Error(message)), timeout)
+			setTimeout(() => reject(new Error(message)), timeout);
 		})
-	])
-}
+	]);
+};
 ```
 
 Using this abstraction, you can conveniently encapsulate timeout-sensitive functions like so:
@@ -59,26 +59,26 @@ Using this abstraction, you can conveniently encapsulate timeout-sensitive funct
 const timeSensitiveFn = async () => {
 	// "Wait" for 4 seconds by pausing execution until
 	// the Promise resolves.
-	await new Promise((resolve) => setTimeout(resolve, 4000))
-	return 'this will not be displayed!'
-}
+	await new Promise((resolve) => setTimeout(resolve, 4000));
+	return "this will not be displayed!";
+};
 
 const mustTimeOut = async () => {
 	// Although the Promise returned from timeSensitiveFn
 	// will be resolved _at some point_, Promise.race()
 	// will return only the first Promise to resolve.
-	return withTimeout(timeSensitiveFn, 1000)
-}
+	return withTimeout(timeSensitiveFn, 1000);
+};
 
 const wontTimeOut = async () => {
 	return withTimeout(
-		async () => 'this will not time out!',
+		async () => "this will not time out!",
 		2000
-	)
-}
+	);
+};
 
-mustTimeOut().catch(console.error)
-wontTimeOut().then(console.log)
+mustTimeOut().catch(console.error);
+wontTimeOut().then(console.log);
 ```
 
 Notice how we did not add the `await` keyword when we were returning from our asynchronous functions. This is because, as noted in the [ESLint documentation](https://eslint.org/docs/rules/no-return-await), doing so keeps the function returning the `Promise` on the call stack while it is waiting for the `Promise` to resolve. This results in an extra microtask (since the caller must `await` the `Promise` returned by the asynchronous function itself as well!).

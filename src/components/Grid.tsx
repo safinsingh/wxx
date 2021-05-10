@@ -1,3 +1,5 @@
-const Grid: React.FC = ({ children }) => <div className="_grid">{children}</div>
+const Grid: React.FC = ({ children }) => (
+	<div className="_grid">{children}</div>
+);
 
-export default Grid
+export default Grid;

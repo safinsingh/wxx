@@ -1,6 +1,6 @@
 ---
 title: "JavaScript's .bind()"
-date: '2021-02-25'
+date: "2021-02-25"
 ---
 
 Earlier this week, a friend of mine, [Rishi](https://rishi.cx/), asked me what `Function.prototype.bind` was. I wasn't really aware of what it did, but just that you had to use it in React classful components. Here's some of the main thoughts I gathered from MDN about `.bind()`:
@@ -11,17 +11,17 @@ According to MDN, it creates a brand new `Function` object 'wrapping' another fu
 const a = {
 	b: 1,
 	c: function () {
-		return this.b
+		return this.b;
 	}
-}
+};
 // ...
-const { c } = a
+const { c } = a;
 // ...
-c()
+c();
 // ^ attempts to reference `c` from globalThis
 // instead do:
-const d = c.bind(a)
-d()
+const d = c.bind(a);
+d();
 // ^ references `a` when calling `d`
 ```
 

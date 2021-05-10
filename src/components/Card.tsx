@@ -3,9 +3,9 @@ const Card = ({
 	description,
 	url
 }: {
-	name: string
-	description: string
-	url: string
+	name: string;
+	description: string;
+	url: string;
 }) => (
 	<a href={url} rel="noreferrer" target="_blank">
 		<div className="_card">
@@ -13,6 +13,6 @@ const Card = ({
 			<p>{description}</p>
 		</div>
 	</a>
-)
+);
 
-export default Card
+export default Card;

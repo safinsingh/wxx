@@ -1,6 +1,6 @@
 // inspired by https://www.joshwcomeau.com/react/dark-mode/
 
-import { darkTheme, lightTheme } from '~/styles'
+import { darkTheme, lightTheme } from "~/styles";
 
 const script = `
 ;(function () {
@@ -23,7 +23,7 @@ const script = `
 		darkMode ? 'dark' : 'light'
 	)
 })();
-`
+`;
 
 export const ThemeScript = () => (
 	<script
@@ -32,4 +32,4 @@ export const ThemeScript = () => (
 			__html: script
 		}}
 	/>
-)
+);

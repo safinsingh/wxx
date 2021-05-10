@@ -1,6 +1,6 @@
 ---
-title: 'Goals & updates for 2021'
-date: '2021-02-21'
+title: "Goals & updates for 2021"
+date: "2021-02-21"
 ---
 
 ## Stuff I learnt building [hermes](https://github.com/safinsingh/hermes)

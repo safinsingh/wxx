@@ -1,35 +1,35 @@
 export type Project = {
-	name: string
-	description: string
-	url: string
-}
+	name: string;
+	description: string;
+	url: string;
+};
 
 export type ApiResponse = {
 	repositoryOwner: {
 		itemShowcase: {
 			items: {
 				edges: Array<{
-					node: Project
-				}>
-			}
-		}
-	}
-}
+					node: Project;
+				}>;
+			};
+		};
+	};
+};
 
 export type PostMeta = {
-	date: Date
-	title: string
-}
+	date: Date;
+	title: string;
+};
 
 export type PostFragment = PostMeta & {
-	id: string
-}
+	id: string;
+};
 
 export type Post = PostFragment & {
-	innerMD: string
-}
+	innerMD: string;
+};
 
 export type ThemeContextTy = {
-	theme?: string
-	setTheme: (theme: string) => void
-}
+	theme?: string;
+	setTheme: (theme: string) => void;
+};

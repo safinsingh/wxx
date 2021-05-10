@@ -1,10 +1,12 @@
-/** @type {import('@types/prettier').Options} */
+// @ts-check
+
+/** @type {import('prettier').Options} */
 module.exports = {
-	singleQuote: true,
-	trailingComma: 'none',
+	singleQuote: false,
+	trailingComma: "none",
 	printWidth: 80,
-	semi: false,
+	semi: true,
 	useTabs: true,
-	proseWrap: 'never',
-	endOfLine: 'lf'
-}
+	proseWrap: "never",
+	endOfLine: "lf"
+};

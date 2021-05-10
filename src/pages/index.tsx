@@ -1,13 +1,13 @@
-import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import Link from 'next/link'
-import { getProjects } from '~/api'
-import Card from '~/components/Card'
-import Container from '~/components/Container'
-import Grid from '~/components/Grid'
-import Links from '~/components/Links'
-import Section from '~/components/Section'
-import { links } from '~/data'
-import { getPosts } from '~/posts'
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import Link from "next/link";
+import { getProjects } from "~/api";
+import Card from "~/components/Card";
+import Container from "~/components/Container";
+import Grid from "~/components/Grid";
+import Links from "~/components/Links";
+import Section from "~/components/Section";
+import { links } from "~/data";
+import { getPosts } from "~/posts";
 
 const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	projects,
@@ -23,14 +23,14 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 				developer, and cybersecurity competitor.
 			</p>
 			<p>
-				I develop production-ready applications with React and Node.js. In
-				my free time, I enjoy making side projects, learning Rust, and
-				playing the cello.
+				I develop production-ready applications with React and Node.js.
+				In my free time, I enjoy making side projects, learning Rust,
+				and playing the cello.
 			</p>
 			<p>
-				I’m currently not looking for internships at the moment, but I will
-				be in the summer of <b>2021</b>. In the meantime, feel free to shoot
-				me an{' '}
+				I’m currently not looking for internships at the moment, but I
+				will be in the summer of <b>2021</b>. In the meantime, feel free
+				to shoot me an{" "}
 				<a className="_email" href="mailto:safin.singh@gmail.com">
 					email!
 				</a>
@@ -54,7 +54,7 @@ const Home: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 			))}
 		</Section>
 	</Container>
-)
+);
 
 export const getStaticProps: GetStaticProps = async () => ({
 	props: {
@@ -62,6 +62,6 @@ export const getStaticProps: GetStaticProps = async () => ({
 		projects: await getProjects()
 	},
 	revalidate: 1
-})
+});
 
-export default Home
+export default Home;

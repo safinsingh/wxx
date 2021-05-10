@@ -1,29 +1,29 @@
-import type { InferGetStaticPropsType } from 'next'
-import Link from 'next/link'
-import { useContext } from 'react'
-import ReactMarkdown from 'react-markdown'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import Container from '~/components/Container'
-import Section from '~/components/Section'
-import { ThemeContext } from '~/components/ThemeProvider'
-import { getSinglePost, getAllPosts } from '~/posts'
-import { dark, light } from '~/styles'
+import type { InferGetStaticPropsType } from "next";
+import Link from "next/link";
+import { useContext } from "react";
+import ReactMarkdown from "react-markdown";
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import Container from "~/components/Container";
+import Section from "~/components/Section";
+import { ThemeContext } from "~/components/ThemeProvider";
+import { getSinglePost, getAllPosts } from "~/posts";
+import { dark, light } from "~/styles";
 
 const CodeBlock: React.FC<{ language: string; value: string }> = ({
 	language,
 	value
 }) => {
-	const { theme } = useContext(ThemeContext)
+	const { theme } = useContext(ThemeContext);
 
 	return (
 		<SyntaxHighlighter
 			language={language}
-			style={theme === 'dark' ? dark : light}
+			style={theme === "dark" ? dark : light}
 		>
 			{value}
 		</SyntaxHighlighter>
-	)
-}
+	);
+};
 
 const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	post
@@ -43,19 +43,19 @@ const Post: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 			</Link>
 		</Section>
 	</Container>
-)
+);
 
 export const getStaticProps = async ({ params: { post } }) => ({
 	props: {
 		post: await getSinglePost(post as string)
 	}
-})
+});
 
 export const getStaticPaths = async () => {
 	return {
 		fallback: false,
 		paths: await getAllPosts()
-	}
-}
+	};
+};
 
-export default Post
+export default Post;

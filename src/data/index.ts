@@ -1,10 +1,10 @@
-import type { Project } from '~/types'
+import type { Project } from "~/types";
 
 export const links = Object.entries({
-	github: 'https://github.com/safinsingh',
-	linkedin: 'https://linkedin.com/in/safinsingh',
-	twitter: 'https://twitter.com/safinsingh'
-})
+	github: "https://github.com/safinsingh",
+	linkedin: "https://linkedin.com/in/safinsingh",
+	twitter: "https://twitter.com/safinsingh"
+});
 
 export const query = `
 	query {
@@ -26,17 +26,17 @@ export const query = `
 			}
 		}
 	}
-`
+`;
 
 export const reverseColorMode = (mode: string) =>
-	mode === 'light' ? 'dark' : 'light'
+	mode === "light" ? "dark" : "light";
 export const modeAsEmoji = (mode: string) =>
-	mode === 'light' ? '🌙 Dark' : '☀️ Light'
+	mode === "light" ? "🌙 Dark" : "☀️ Light";
 
 export const defaultProjects = () => {
 	return new Array(6).fill({
-		description: 'this is a dummy project',
-		name: 'dummy project',
-		url: 'https://google.com'
-	}) as Project[]
-}
+		description: "this is a dummy project",
+		name: "dummy project",
+		url: "https://google.com"
+	}) as Project[];
+};

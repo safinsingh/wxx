@@ -5,7 +5,7 @@
 html,
 body,
 * {
-	font-family: 'Inter', sans-serif !important;
+	font-family: "Inter", sans-serif !important;
 	box-sizing: border-box;
 	text-decoration: none !important;
 	transition: color 0.15s, background-color 0.15s, border 0.15s;
@@ -53,7 +53,7 @@ h1 {
 	font-size: 1.5rem;
 	color: var(--fg);
 	text-align: center;
-	font-family: 'Barlow' !important;
+	font-family: "Barlow" !important;
 }
 
 p {
@@ -63,7 +63,7 @@ p {
 ._container {
 	display: flex;
 	flex-direction: column;
-	max-width: 33rem;
+	max-width: 35rem;
 	margin: 0 auto;
 	padding: 0rem 1rem;
 }
@@ -134,7 +134,7 @@ b {
 
 ._card h2 {
 	color: var(--fg);
-	font-family: 'Barlow' !important;
+	font-family: "Barlow" !important;
 }
 
 ._card p {
@@ -195,7 +195,7 @@ code {
 
 pre span,
 code {
-	font-family: 'JetBrains Mono', monospace !important;
+	font-family: "JetBrains Mono", monospace !important;
 	font-size: 0.9rem !important;
 	tab-size: 1rem;
 }

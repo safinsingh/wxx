@@ -1,6 +1,6 @@
 ---
-title: 'Why TypeScript? (A gentle introduction)'
-date: '2021-02-05'
+title: "Why TypeScript? (A gentle introduction)"
+date: "2021-02-05"
 ---
 
 Some **awesome** things about TypeScript:
@@ -27,24 +27,24 @@ A **visual** comparison:
 Take the following JavaScript, for example:
 
 ```javascript
-const someNumber = 1
+const someNumber = 1;
 const someObject = {
 	a: {
 		nested: {
 			property: 1
 		}
 	}
-}
+};
 
 function onObject(obj) {
-	console.log(obj.a.nested.property)
+	console.log(obj.a.nested.property);
 }
 
-console.log("we're in the middle of some action!")
+console.log("we're in the middle of some action!");
 
 // ...
 
-onObject(someNumber)
+onObject(someNumber);
 ```
 
 Now, obviously, we see that we're passing the number to the function rather than the object itself. Now, if we attempt to run this:
@@ -63,28 +63,28 @@ TypeError: Cannot read property 'nested' of undefined
 Oh no! Our code exited prematurely in the middle of "some action"! This is because the error occurred at _runtime_, so it exited in the middle of our script. Now, let's write the same thing in TypeScript and attempt to compile it:
 
 ```typescript
-const someNumber = 1
+const someNumber = 1;
 const someObject = {
 	a: {
 		nested: {
 			property: 1
 		}
 	}
-}
+};
 
 // Notice this explicit `type` annotation? It does increase
 // code verbosity but saves you lots of time in the long run!
-type SomeObject = { a: { nested: { property: number } } }
+type SomeObject = { a: { nested: { property: number } } };
 
 function onObject(obj: SomeObject) {
-	console.log(obj.a.nested.property)
+	console.log(obj.a.nested.property);
 }
 
-console.log("we're in the middle of some action!")
+console.log("we're in the middle of some action!");
 
 // ...
 
-onObject(someNumber)
+onObject(someNumber);
 ```
 
 Looks the same, right? Almost! All we had to do was add a type annotation for the parameter of the function. The rest of the types were "inferred," or intelligently guessed from the TypeScript compiler. Now, let's attempt to compile this code:
@@ -100,26 +100,26 @@ We can see that our program didn't even execute! This is because the inferred ty
 Let's correct the code so we can conclude on a satisfying note:
 
 ```typescript
-const someNumber = 1
+const someNumber = 1;
 const someObject = {
 	a: {
 		nested: {
 			property: 1
 		}
 	}
-}
+};
 
-type SomeObject = { a: { nested: { property: number } } }
+type SomeObject = { a: { nested: { property: number } } };
 
 function onObject(obj: SomeObject) {
-	console.log(obj.a.nested.property)
+	console.log(obj.a.nested.property);
 }
 
-console.log("we're in the middle of some action!")
+console.log("we're in the middle of some action!");
 
 // ...
 
-onObject(someObject)
+onObject(someObject);
 ```
 
 And then:

@@ -1,14 +1,14 @@
 /* eslint-disable class-methods-use-this */
 
-import type { DocumentContext } from 'next/document'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { ThemeScript } from '~/components/ThemeScript'
+import type { DocumentContext } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import { ThemeScript } from "~/components/ThemeScript";
 
 export default class extends Document {
 	public static async getInitialProps(context: DocumentContext) {
-		const initialProps = await Document.getInitialProps(context)
+		const initialProps = await Document.getInitialProps(context);
 
-		return { ...initialProps }
+		return { ...initialProps };
 	}
 
 	public render() {
@@ -21,6 +21,6 @@ export default class extends Document {
 					<NextScript />
 				</body>
 			</Html>
-		)
+		);
 	}
 }
