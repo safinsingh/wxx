@@ -13,7 +13,7 @@ specifiers:
   eslint-import-resolver-typescript: 2.4.0
   eslint-plugin-prettier: 3.4.0
   gray-matter: 4.0.3
-  husky: 5.2.0
+  husky: 6.0.0
   next: 10.2.0
   node-fetch: 2.6.1
   prettier: 2.3.0
@@ -46,7 +46,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.26.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.26.0
   eslint-plugin-prettier: 3.4.0_39fed7ca8f33f3403e39ca7e7aa90c0f
-  husky: 5.2.0
+  husky: 6.0.0
   prettier: 2.3.0
   typescript: 4.2.4
 
@@ -2171,9 +2171,8 @@ packages:
     resolution: {integrity: sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=}
     dev: false
 
-  /husky/5.2.0:
-    resolution: {integrity: sha512-AM8T/auHXRBxlrfPVLKP6jt49GCM2Zz47m8G3FOMsLmTv8Dj/fKVWE0Rh2d4Qrvmy131xEsdQnb3OXRib67PGg==}
-    engines: {node: '>= 10'}
+  /husky/6.0.0:
+    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
     hasBin: true
     dev: true
 
