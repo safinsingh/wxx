@@ -34,10 +34,6 @@ const Meta = () => (
 		<meta content="en_US" property="og:locale" />
 
 		{/* Twitter */}
-		<meta
-			content="Web developer and cybersecurity competitor."
-			name="twitter:card"
-		/>
 		<meta content="https://safin.dev" name="twitter:url" />
 		<meta content="Safin Singh" name="twitter:title" />
 		<meta
